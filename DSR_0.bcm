@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/N7_DSR/DSR_ctx_0.bcc" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.seesContext#("/>
+    <org.eventb.core.scInternalContext name="DSR_ctx_0">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(NOEUDS)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(MESSAGES)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scCarrierSet name="MESSAGES" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.scCarrierSet name="NOEUDS" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(NOEUDS)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInvariant name="DSR_ctx_1" org.eventb.core.label="inv1" org.eventb.core.predicate="Noeuds⊆NOEUDS" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#*" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="DSR_ctx_2" org.eventb.core.label="inv2" org.eventb.core.predicate="Messages⊆MESSAGES" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#0" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="DSR_ctx_3" org.eventb.core.label="inv3" org.eventb.core.predicate="Liens∈NOEUDS ⇸ NOEUDS" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#1" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scInvariant name="DSR_ctx_4" org.eventb.core.label="inv4" org.eventb.core.predicate="Routes⊆Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#2" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scVariable name="Routes" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.variable#\/" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+    <org.eventb.core.scVariable name="Liens" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.variable#." org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+    <org.eventb.core.scVariable name="Messages" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.variable#-" org.eventb.core.type="ℙ(MESSAGES)"/>
+    <org.eventb.core.scVariable name="Noeuds" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.variable#)" org.eventb.core.type="ℙ(NOEUDS)"/>
+    <org.eventb.core.scEvent name="DSR_ctx_5" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#'">
+        <org.eventb.core.scAction name="'" org.eventb.core.assignment="Noeuds ≔ ∅ ⦂ ℙ(NOEUDS)" org.eventb.core.label="act1" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#'|org.eventb.core.action#'"/>
+        <org.eventb.core.scAction name="(" org.eventb.core.assignment="Routes,Liens,Messages :∣ ⊤" org.eventb.core.label="GEN" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#'"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="DSR_ctx_6" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjoutNoeud" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#+">
+        <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="n∈NOEUDS" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#+|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="n∉Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#+|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scParameter name="n" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#+|org.eventb.core.parameter#'" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.scAction name="o" org.eventb.core.assignment="Noeuds ≔ Noeuds∪{n}" org.eventb.core.label="act1" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#+|org.eventb.core.action#)"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="DSR_ctx_7" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SuppressionNoeud" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#,">
+        <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="n∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#,|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scParameter name="n" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#,|org.eventb.core.parameter#'" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.scAction name="o" org.eventb.core.assignment="Noeuds ≔ Noeuds ∖ {n}" org.eventb.core.label="act1" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#,|org.eventb.core.action#*"/>
+    </org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>
