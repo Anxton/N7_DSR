@@ -4,11 +4,12 @@
         <org.eventb.core.action name="'" org.eventb.core.assignment="Noeuds ≔ ∅" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="Liens ≔ ∅" org.eventb.core.label="act2"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="Messages ≔ ∅" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="Routes ≔ ∅" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="Source ≔ ∅" org.eventb.core.label="act5"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="Destination ≔ ∅" org.eventb.core.label="act6"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="StockNoeud ≔ ∅" org.eventb.core.label="act7"/>
         <org.eventb.core.action name="." org.eventb.core.assignment="EnTransitVers ≔ ∅" org.eventb.core.label="act8"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="MessagesPerdus ≔ ∅" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="MessagesLiens ≔ ∅" org.eventb.core.label="act10"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="DSR_ctx_0"/>
     <org.eventb.core.variable name=")" org.eventb.core.identifier="Noeuds"/>
@@ -31,10 +32,8 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="-" org.eventb.core.identifier="Messages"/>
     <org.eventb.core.variable name="." org.eventb.core.identifier="Liens"/>
-    <org.eventb.core.variable name="/" org.eventb.core.identifier="Routes"/>
     <org.eventb.core.invariant name="0" org.eventb.core.label="inv2" org.eventb.core.predicate="Messages ⊆ MESSAGES"/>
     <org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="Liens ∈ Noeuds ↔ Noeuds"/>
-    <org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="Routes ⊆ ℙ(Liens)"/>
     <org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjoutLien">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="n1"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="n1 ∈ Noeuds"/>
@@ -42,24 +41,16 @@
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="n2 ∈ Noeuds"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="n1↦n2 ∉ Liens"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="Liens ≔ Liens ∪ {n1↦n2}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="n1 ≠ n2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SuppressionLien">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="n1"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="n2"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="n1↦n2 ∈ Liens"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="Liens≔ Liens ∖ {n1↦n2}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="∀r·(r ∈ Routes ⇒ n1↦n2 ∉ r)"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjoutRoute">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="Routes ≔ Routes ∪ {r}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ⊆ Liens"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∉ Routes"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SuppressionRoute">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="Routes ≔ Routes ∖ {r}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="l"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="l ∈ Liens"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="Liens ≔ Liens ∖ {l}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="MessagesLiens ≔ MessagesLiens ∖ {messages ↦l}" org.eventb.core.label="act2"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.identifier="messages"/>
+        <org.eventb.core.guard name="." org.eventb.core.comment="prof ALED" org.eventb.core.label="grd2" org.eventb.core.predicate="messages ⊆ dom(MessagesLiens) ^ "/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="MessagesPerdus ≔ MessagesPerdus ∪ messages" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjoutMessage">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
@@ -73,6 +64,7 @@
         <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="noeudDestination ∈ Noeuds"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="Destination ≔ Destination ∪ {m↦noeudDestination}" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="StockNoeud ≔ StockNoeud ∪ {m↦noeudSource}" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="noeudSource ≠ noeudDestination"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="8" org.eventb.core.identifier="Source"/>
     <org.eventb.core.invariant name="9" org.eventb.core.label="inv5" org.eventb.core.predicate="Source ∈ Messages → Noeuds"/>
@@ -84,8 +76,10 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="Messages ≔ Messages ∖ {m}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="Source ≔ Source ∖ {m↦Source(m)}" org.eventb.core.label="act2"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="Destination ≔ Destination ∖ {m↦Destination(m)}" org.eventb.core.label="act3"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="m ∉ dom(StockNoeud)"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="m ∈ dom(StockNoeud)"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="m ∉ dom(EnTransitVers)"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="m ∉ MessagesPerdus"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="StockNoeud ≔ StockNoeud ∖ {m↦StockNoeud(m)}" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Envoyer">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
@@ -95,11 +89,38 @@
         <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="emetteur ∈ Noeuds"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="destinataire ∈ Noeuds"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="emetteur↦destinataire ∈ Liens"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="StockNoeud ≔ StockNoeud ∖ {m↦emetteur}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="m↦emetteur ∈ StockNoeud"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="EnTransitVers ≔ EnTransitVers ∪ {m↦destinataire}" org.eventb.core.comment="doublon ?" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="m ∉ dom(EnTransitVers)"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="MessagesLiens ≔ MessagesLiens ∪ {m↦(emetteur↦destinataire)}" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Recevoir"/>
-    <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Perdre"/>
+    <org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Recevoir">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="destinataire"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="m ∈ Messages"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="m↦destinataire ∈ EnTransitVers"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="StockNoeud ≔ StockNoeud ∪ {m↦destinataire}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="EnTransitVers ≔ EnTransitVers ∖ {m↦destinataire}" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="m ∉ dom(StockNoeud)"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="m ∈ dom(MessagesLiens)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Perdre">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="m ∈ Messages"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="m ∈ dom(EnTransitVers)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="m ∉ dom(StockNoeud)"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="EnTransitVers ≔ EnTransitVers ∖ {m↦EnTransitVers(m)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="MessagesPerdus ≔ MessagesPerdus ∪ {m}" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
     <org.eventb.core.variable name="A" org.eventb.core.identifier="StockNoeud"/>
     <org.eventb.core.invariant name="B" org.eventb.core.label="inv7" org.eventb.core.predicate="StockNoeud ∈ Messages ⇸ Noeuds"/>
     <org.eventb.core.variable name="C" org.eventb.core.identifier="EnTransitVers"/>
     <org.eventb.core.invariant name="D" org.eventb.core.label="inv8" org.eventb.core.predicate="EnTransitVers ∈ Messages ⇸ Noeuds"/>
+    <org.eventb.core.invariant name="E" org.eventb.core.label="inv9" org.eventb.core.predicate="MessagesPerdus ⊆ Messages"/>
+    <org.eventb.core.invariant name="F" org.eventb.core.label="inv10" org.eventb.core.predicate="dom(StockNoeud) ∪ dom(EnTransitVers) ∪ MessagesPerdus = Messages"/>
+    <org.eventb.core.variable name="G" org.eventb.core.identifier="MessagesPerdus"/>
+    <org.eventb.core.invariant name="H" org.eventb.core.label="inv11" org.eventb.core.predicate="dom(StockNoeud) ∩ dom(EnTransitVers) ∩ MessagesPerdus = ∅"/>
+    <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
+    <org.eventb.core.invariant name="J" org.eventb.core.comment="pour tous les messages en transit, ils sont sur un lien" org.eventb.core.label="inv12" org.eventb.core.predicate="MessagesLiens ∈ Messages ⇸ Liens"/>
 </org.eventb.core.machineFile>
