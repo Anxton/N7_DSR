@@ -47,10 +47,9 @@
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="l"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="l ∈ Liens"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="Liens ≔ Liens ∖ {l}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="MessagesLiens ≔ MessagesLiens ∖ {messages ↦l}" org.eventb.core.label="act2"/>
-        <org.eventb.core.parameter name="-" org.eventb.core.identifier="messages"/>
-        <org.eventb.core.guard name="." org.eventb.core.comment="prof ALED" org.eventb.core.label="grd2" org.eventb.core.predicate="messages ⊆ dom(MessagesLiens) ^ "/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="MessagesPerdus ≔ MessagesPerdus ∪ messages" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="MessagesLiens ≔ MessagesLiens ⩥ {l}" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="MessagesPerdus ≔ MessagesPerdus ∪ MessagesLiens∼[{l}]" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="EnTransitVers ≔ EnTransitVers ⩥ {prj2(l)} " org.eventb.core.label="act4"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjoutMessage">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
@@ -104,6 +103,7 @@
         <org.eventb.core.action name="-" org.eventb.core.assignment="EnTransitVers ≔ EnTransitVers ∖ {m↦destinataire}" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="m ∉ dom(StockNoeud)"/>
         <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="m ∈ dom(MessagesLiens)"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="MessagesLiens ≔ MessagesLiens ∖ {m↦MessagesLiens(m)}" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Perdre">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>

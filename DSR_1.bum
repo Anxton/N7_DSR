@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.refinesMachine name="'" org.eventb.core.target="DSR_0"/>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="DSR_ctx_0"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="Noeuds"/>
+    <org.eventb.core.variable name="-" org.eventb.core.identifier="Messages"/>
+    <org.eventb.core.variable name="." org.eventb.core.identifier="Liens"/>
+    <org.eventb.core.variable name="8" org.eventb.core.identifier="Source"/>
+    <org.eventb.core.variable name=":" org.eventb.core.identifier="Destination"/>
+    <org.eventb.core.variable name="A" org.eventb.core.identifier="StockNoeud"/>
+    <org.eventb.core.variable name="C" org.eventb.core.identifier="EnTransitVers"/>
+    <org.eventb.core.variable name="G" org.eventb.core.identifier="MessagesPerdus"/>
+    <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
+    <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionNoeud">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionNoeud"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutLien">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutLien"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionLien">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionLien"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutMessage">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutMessage"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionMessage">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionMessage"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Envoyer">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Recevoir">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd7" org.eventb.core.predicate="destinataire ≠ Destination(m)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Perdre">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Perdre"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arriver">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="destinataire = Destination(m)"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
