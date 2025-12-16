@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="p2,p1">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℙ(ℤ×NOEUDS)))∈ℙ(ℤ ⇸ (∅ ⦂ ℙ(NOEUDS)))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="(∅ ⦂ ℙ(ℙ(ℤ×NOEUDS)))∈ℙ({∅ ⦂ ℙ(ℤ×NOEUDS)})"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AjoutNoeud/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p19"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p2,p7,p16,p14,p12,p6,p3,p9,p10,p13,p1,p11,p5,p15,p17">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TablesRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Routes∈ℙ(ℤ ⇸ Noeuds)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∉Noeuds"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TablesRoutage∈Noeuds → Routes"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Routes∈ℙ(ℤ ⇸ Noeuds∪{n})"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="EnTransitVers∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬n∈Noeuds"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀r⦂ℙ(ℤ×NOEUDS),hop1⦂ℤ×NOEUDS,hop2⦂ℤ×NOEUDS·r∈Routes∧hop1∈r∧hop2∈r⇒(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)+1∨(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)+1=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="StockNoeud∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Destination∈Messages → Noeuds"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="n∈NOEUDS"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="n∈dom(TablesRoutage)"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Source∈Messages → Noeuds"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="SuppressionNoeud/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p25"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p2,p6,p15,p18,p10,p1,p4,p8,p9,p12,p5,p3,p19,p20,p21,p22,p23">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TableRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(NOEUDS))"/>
+        <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬n∈ran(Destination)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈Noeuds"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TableRoutage∈Noeuds ↠ ℙ(Noeuds)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="n∉ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬n∈ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬n∈dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="EnTransitVers∈Messages ⤔ Noeuds"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬n∈ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬n∈ran(Source)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="StockNoeud∈Messages ⤔ Noeuds"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="n∉dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="n∉ran(Source)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TableRoutage∈Noeuds ∖ {n} ↠ ℙ(Noeuds ∖ {n})"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="Source∈Messages ↠ Noeuds"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="n∉ran(Destination)"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="n∉ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Destination∈Messages ↠ Noeuds"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(NOEUDS×ℙ(NOEUDS)))∈(∅ ⦂ ℙ(NOEUDS)) → ℙ(∅ ⦂ ℙ(NOEUDS))"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AjoutNoeud/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="n∉Noeuds">
+            <org.eventb.core.prIdent name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
+            <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+            <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∈NOEUDS">
+            <org.eventb.core.prIdent name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
+            <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬n∈Noeuds">
+            <org.eventb.core.prIdent name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
+            <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+            <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Messages⊆MESSAGES">
+            <org.eventb.core.prIdent name="MESSAGES" org.eventb.core.type="ℙ(MESSAGES)"/>
+            <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Noeuds⊆NOEUDS">
+            <org.eventb.core.prIdent name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
+            <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="SuppressionNoeud/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p19"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p24"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p25"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p2,p6,p15,p18,p10,p1,p4,p8,p9,p12,p5,p3,p19,p20,p21,p22,p23">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TableRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(NOEUDS))"/>
+        <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬n∈ran(Destination)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈Noeuds"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TableRoutage∈Noeuds ↠ ℙ(Noeuds)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="n∉ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬n∈ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬n∈dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="EnTransitVers∈Messages ⤔ Noeuds"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬n∈ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬n∈ran(Source)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="StockNoeud∈Messages ⤔ Noeuds"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="n∉dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="n∉ran(Source)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TableRoutage∈Noeuds ∖ {n} ↠ ℙ(Noeuds ∖ {n})"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="Source∈Messages ↠ Noeuds"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="n∉ran(Destination)"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="n∉ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Destination∈Messages ↠ Noeuds"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀r⦂ℙ(ℤ×NOEUDS),hop1⦂ℤ×NOEUDS,hop2⦂ℤ×NOEUDS·r∈(∅ ⦂ ℙ(ℙ(ℤ×NOEUDS)))∧hop1∈r∧hop2∈r⇒(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)+1∨(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)+1=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AjoutNoeud/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p18"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p19"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p1,p6,p15,p13,p11,p5,p2,p8,p9,p12,p10,p4,p14,p16">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TablesRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∉Noeuds"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="TablesRoutage∈Noeuds → Routes"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="EnTransitVers∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬n∈Noeuds"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Routes⊆ℙ(Liens)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="StockNoeud∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TablesRoutage∪{n ↦ (∅ ⦂ ℙ(NOEUDS×NOEUDS))}∈Noeuds∪{n} → Routes"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Destination∈Messages → Noeuds"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="n∈NOEUDS"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="n∈dom(TablesRoutage)"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="Source∈Messages → Noeuds"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="SuppressionNoeud/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p26"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p27"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p7,p1,p6,p20,p16,p12,p5,p3,p8,p9,p13,p10,p4,p2,p18,p21,p22,p23,p24,p25">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TablesRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬n∈ran(Destination)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="n∈Noeuds"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="EnTransitVers∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="StockNoeud∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="n∉ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬n∈ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="n∈dom(TablesRoutage)"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬n∈dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬n∈ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="TablesRoutage∈Noeuds → Routes"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬n∈ran(Source)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Routes⊆ℙ(Liens)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="n∉dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="n∉ran(Source)"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Destination∈Messages → Noeuds"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="{n} ⩤ TablesRoutage∈Noeuds ∖ {n} → Routes"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="n∉ran(Destination)"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="n∉ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="Source∈Messages → Noeuds"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AjoutRoute/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p1,p2">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps=""/>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(NOEUDS))"/>
+        <org.eventb.core.prIdent name="route" org.eventb.core.type="ℙ(ℙ(NOEUDS))"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊤∧⊤"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Routes⊆ℙ(Noeuds)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="route⊆ℙ(Noeuds)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀S⦂ℙ(NOEUDS),n1⦂NOEUDS,n2⦂NOEUDS·S∈route∧n1∈S∧n2∈S∧n1≠n2⇒n1 ↦ n2∈Liens">
+            <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀S⦂ℙ(NOEUDS),n1⦂NOEUDS,n2⦂NOEUDS·S∈route∧n1∈S∧n2∈S∧¬n1=n2⇒n1 ↦ n2∈Liens">
+            <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Routes∪route⊆ℙ(Noeuds)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Routes⊆ℙ(Noeuds)∧route⊆ℙ(Noeuds)"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AjoutRoute/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p18"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p1,p7,p15,p13,p11,p4,p2,p9,p10,p12,p14,p3,p5,p16">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(NOEUDS))"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TablesRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(NOEUDS))"/>
+        <org.eventb.core.prIdent name="route" org.eventb.core.type="ℙ(ℙ(NOEUDS))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="TablesRoutage∈Noeuds → Routes"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="EnTransitVers∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="route⊆ℙ(Noeuds)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀S⦂ℙ(NOEUDS),n1⦂NOEUDS,n2⦂NOEUDS·S∈route∧n1∈S∧n2∈S∧n1≠n2⇒n1 ↦ n2∈Liens"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="StockNoeud∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Destination∈Messages → Noeuds"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Routes⊆ℙ(Noeuds)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TablesRoutage∈Noeuds → Routes∪route"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="∀S⦂ℙ(NOEUDS),n1⦂NOEUDS,n2⦂NOEUDS·S∈route∧n1∈S∧n2∈S∧¬n1=n2⇒n1 ↦ n2∈Liens"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="Source∈Messages → Noeuds"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AjoutLien/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p3,p1,p6,p7">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="n1" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prIdent name="n2" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Routes⊆ℙ(Liens∪{n1 ↦ n2})"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬n1=n2"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="n2∈Noeuds"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="n1 ↦ n2∉Liens"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n1∈Noeuds"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬n1 ↦ n2∈Liens"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Messages⊆MESSAGES">
+            <org.eventb.core.prIdent name="MESSAGES" org.eventb.core.type="ℙ(MESSAGES)"/>
+            <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Routes⊆ℙ(Liens)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="n1≠n2"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="SuppressionLien/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Messages⊆MESSAGES">
+            <org.eventb.core.prIdent name="MESSAGES" org.eventb.core.type="ℙ(MESSAGES)"/>
+            <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Noeuds⊆NOEUDS">
+            <org.eventb.core.prIdent name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
+            <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(NOEUDS×ℙ(ℤ×NOEUDS)))∈(∅ ⦂ ℙ(NOEUDS)) → (∅ ⦂ ℙ(ℙ(ℤ×NOEUDS)))"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="AjoutNoeud/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p17"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p18"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p19"/>
+                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p20"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p2,p7,p16,p14,p12,p6,p3,p9,p10,p13,p1,p11,p5,p15,p17">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TablesRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Routes∈ℙ(ℤ ⇸ Noeuds)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="n∉Noeuds"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TablesRoutage∈Noeuds → Routes"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="EnTransitVers∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬n∈Noeuds"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀r⦂ℙ(ℤ×NOEUDS),hop1⦂ℤ×NOEUDS,hop2⦂ℤ×NOEUDS·r∈Routes∧hop1∈r∧hop2∈r⇒(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)+1∨(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)+1=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="StockNoeud∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TablesRoutage∪{n ↦ (∅ ⦂ ℙ(ℤ×NOEUDS))}∈Noeuds∪{n} → Routes"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Destination∈Messages → Noeuds"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="n∈NOEUDS"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="n∈dom(TablesRoutage)"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Source∈Messages → Noeuds"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="SuppressionNoeud/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21" org.eventb.core.prSets="MESSAGES,NOEUDS">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
+                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25"/>
+                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p20" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p26"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p27"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p28"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p8,p2,p7,p21,p17,p13,p6,p4,p9,p10,p14,p1,p11,p5,p3,p19,p22,p23,p24,p25,p26">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.prIdent name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.prIdent name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.prIdent name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.prIdent name="Routes" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.prIdent name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.prIdent name="TablesRoutage" org.eventb.core.type="ℙ(NOEUDS×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.prIdent name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬n∈ran(Destination)"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Routes∈ℙ(ℤ ⇸ Noeuds)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n∈Noeuds"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="MessagesPerdus⊆Messages"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="EnTransitVers∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="finite(NOEUDS)"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="StockNoeud∈Messages ⇸ Noeuds"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="n∉ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬n∈ran(StockNoeud)"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="n∈dom(TablesRoutage)"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬n∈dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(MESSAGES)"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬n∈ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="TablesRoutage∈Noeuds → Routes"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬n∈ran(Source)"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀r⦂ℙ(ℤ×NOEUDS),hop1⦂ℤ×NOEUDS,hop2⦂ℤ×NOEUDS·r∈Routes∧hop1∈r∧hop2∈r⇒(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)+1∨(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop1)+1=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(hop2)"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="n∉dom(Liens)∪ran(Liens)"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="MessagesLiens∈Messages ⤔ Liens"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="n∉ran(Source)"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="Destination∈Messages → Noeuds"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="{n} ⩤ TablesRoutage∈Noeuds ∖ {n} → Routes"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="n∉ran(Destination)"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="Messages⊆MESSAGES"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="n∉ran(EnTransitVers)"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="Source∈Messages → Noeuds"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

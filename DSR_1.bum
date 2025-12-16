@@ -33,15 +33,15 @@
     <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Envoyer">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Recevoir">
+    <org.eventb.core.event name="R" org.eventb.core.comment="Ce raffinage distingue Recevoir et Arriver" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Recevoir">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd7" org.eventb.core.predicate="destinataire ≠ Destination(m)"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="EnTransitVers(m) ≠ Destination(m)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Perdre">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Perdre"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arriver">
+    <org.eventb.core.event name="T" org.eventb.core.comment="Arriver = Destination du message" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arriver">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="destinataire = Destination(m)"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="EnTransitVers(m) = Destination(m)"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>
