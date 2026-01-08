@@ -11,7 +11,9 @@
     <org.eventb.core.variable name="C" org.eventb.core.identifier="EnTransitVers"/>
     <org.eventb.core.variable name="G" org.eventb.core.identifier="MessagesPerdus"/>
     <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
-    <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="MessagesArrives ≔ ∅" org.eventb.core.label="act11"/>
+    </org.eventb.core.event>
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
     </org.eventb.core.event>
@@ -29,6 +31,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionMessage"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="m ∉ MessagesArrives"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Envoyer">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
@@ -43,5 +46,8 @@
     <org.eventb.core.event name="T" org.eventb.core.comment="Arriver = Destination du message" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arriver">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="EnTransitVers(m) = Destination(m)"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="MessagesArrives ≔ MessagesArrives ∪ {m}" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
+    <org.eventb.core.variable name="U" org.eventb.core.identifier="MessagesArrives"/>
+    <org.eventb.core.invariant name="V" org.eventb.core.label="inv1" org.eventb.core.predicate="MessagesArrives ⊆ Messages"/>
 </org.eventb.core.machineFile>

@@ -12,18 +12,18 @@
     <org.eventb.core.variable name="G" org.eventb.core.identifier="MessagesPerdus"/>
     <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
     <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="Routes ≔ ∅" org.eventb.core.label="act11"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="TablesRoutage ≔ ∅" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="Routes ≔ ∅" org.eventb.core.label="act12"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="TablesRoutage ≔ ∅" org.eventb.core.label="act13"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="TablesRoutage ≔ TablesRoutage ∪ {n↦∅}" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="n ∈ dom(TablesRoutage)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionNoeud"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="TablesRoutage ≔ {n} ⩤ TablesRoutage" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="n ∈ dom(TablesRoutage)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd8" org.eventb.core.predicate="∀r, hop·(r ∈ Routes ∧ hop ∈ r ⇒ prj2(hop) ≠ n)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutLien">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutLien"/>
@@ -49,19 +49,23 @@
     <org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Arriver">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Arriver"/>
     </org.eventb.core.event>
-    <org.eventb.core.variable name="U" org.eventb.core.identifier="Routes"/>
+    <org.eventb.core.variable name="U" org.eventb.core.identifier="MessagesArrives"/>
     <org.eventb.core.invariant name="V" org.eventb.core.label="inv1" org.eventb.core.predicate="Routes ∈ ℙ(ℤ ⇸ Noeuds)"/>
-    <org.eventb.core.variable name="W" org.eventb.core.identifier="TablesRoutage"/>
-    <org.eventb.core.invariant name="X" org.eventb.core.comment="contigu" org.eventb.core.label="inv2" org.eventb.core.predicate="∀r,hop1,hop2·(&#10;&#9;r ∈ Routes ∧ hop1∈ r ∧ hop2 ∈ r &#10;&#9;⇒&#10;&#9;&#9;prj1(hop1) = prj1(hop2) + 1 &#10;&#9;&#9;∨&#10;&#9;&#9;prj1(hop1) + 1 = prj1(hop2)&#10;) "/>
-    <org.eventb.core.event name="Y" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjoutRoute">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="route"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="route ⊆ ℙ(Noeuds)"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="Routes ≔ Routes ∪ route" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate=" ∀S,n1,n2·(S ∈ route ∧ (n1 ∈ S) ∧ (n2 ∈ S) ∧ (n1 ≠ n2)  ⇒ n1↦ n2 ∈ Liens)"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="Z" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SuppressionRoute">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="route"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="route ∈ "/>
+    <org.eventb.core.variable name="W" org.eventb.core.identifier="Routes"/>
+    <org.eventb.core.invariant name="X" org.eventb.core.comment="Tout hop dans toute route a un precedent ou est le premier" org.eventb.core.label="inv2" org.eventb.core.predicate="∀r, succe·(r ∈ Routes ∧ succe ∈ r ⇒&#10;&#9;∃ prev·(prev ∈ r ∧ prev ≠ succe ∧ prj1(prev) = prj1(succe) − 1)&#10;&#9;∨ &#10;&#9;prj1(succe) = 1&#10;) "/>
+    <org.eventb.core.event name="Y" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreerRoute">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="noeudBase"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="noeudBase ∈ Noeuds"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="Routes ≔ Routes ∪ {{1↦noeudBase}}" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="[" org.eventb.core.label="inv3" org.eventb.core.predicate="TablesRoutage ∈ Noeuds → Routes"/>
+    <org.eventb.core.variable name="\" org.eventb.core.identifier="TablesRoutage"/>
+    <org.eventb.core.event name="]" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ModifierRoute">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="Routes(r) ≔ r ∪ {card(r) + 1 ↦ n}" org.eventb.core.comment="r auquel j'ajoute, (card(r)+1)↦n" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∈ Noeuds"/>
+        <org.eventb.core.guard name="," org.eventb.core.comment="n accessible: n dans lien (r(card(r)) -&gt; n)" org.eventb.core.label="grd3" org.eventb.core.predicate="⊤"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>
