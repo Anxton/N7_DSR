@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="104">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="MESSAGES" org.eventb.core.type="ℙ(MESSAGES)"/>
         <org.eventb.core.poIdentifier name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
         <org.eventb.core.poPredicate name="MESSAGET" org.eventb.core.predicate="finite(NOEUDS)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#("/>
         <org.eventb.core.poPredicate name="MESSAGEU" org.eventb.core.predicate="finite(MESSAGES)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="99">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
         <org.eventb.core.poIdentifier name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
         <org.eventb.core.poIdentifier name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
@@ -29,7 +29,7 @@
         <org.eventb.core.poPredicate name="MessagesArrive}" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#H"/>
         <org.eventb.core.poPredicate name="MessagesArrive~" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus∪dom(MessagesLiens)=Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#J"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="100">
+    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTALLHYPMessagesArrivet"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(MESSAGES))⊆(∅ ⦂ ℙ(MESSAGES))" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.invariant#V"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#'"/>
@@ -93,7 +93,7 @@
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀m⦂MESSAGES·m ↦ l∈MessagesLiens⇒m∉dom(StockNoeud)∧m∉MessagesPerdus∧m∈dom(EnTransitVers)∧m∈Messages∧(prj2 ⦂ ℙ(NOEUDS×NOEUDS×NOEUDS))(l)=EnTransitVers(m)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#4|org.eventb.core.guard#3"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="l∈Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#4|org.eventb.core.guard#4"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="AjoutMessage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="99">
+    <org.eventb.core.poSequent name="AjoutMessage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTALLHYPMessagesArrivey"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="MessagesArrives⊆Messages∪{m}" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.invariant#V"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#7"/>
@@ -118,7 +118,7 @@
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="noeudDestination∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#7|org.eventb.core.guard#\/"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="noeudSource≠noeudDestination" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#7|org.eventb.core.guard#2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="SuppressionMessage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="104">
+    <org.eventb.core.poSequent name="SuppressionMessage/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTALLHYPMessagesArrivez"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="MessagesArrives⊆Messages ∖ {m}" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.invariant#V"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#="/>
@@ -134,7 +134,7 @@
         <org.eventb.core.poIdentifier name="Destination'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
         <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPMessagesArrivez" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTIDENTMessagesArrivez" org.eventb.core.poStamp="104">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPMessagesArrivez" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTIDENTMessagesArrivez" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∈dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#,"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∉dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#-"/>
@@ -159,7 +159,7 @@
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="m∉dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#1"/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="m∉MessagesPerdus" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#3"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="Recevoir/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="99">
+    <org.eventb.core.poSequent name="Recevoir/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTHYPMessagesArrive\|*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m∈dom(EnTransitVers)∧EnTransitVers∈MESSAGES ⇸ NOEUDS∧m∈dom(Destination)∧Destination∈MESSAGES ⇸ NOEUDS" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#R|org.eventb.core.guard#2"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#R|org.eventb.core.guard#2"/>
@@ -192,13 +192,13 @@
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#@|org.eventb.core.guard#*"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#@|org.eventb.core.guard#-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="Arriver/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="103">
+    <org.eventb.core.poSequent name="Arriver/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTHYPMessagesArrive~*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m∈dom(EnTransitVers)∧EnTransitVers∈MESSAGES ⇸ NOEUDS∧m∈dom(Destination)∧Destination∈MESSAGES ⇸ NOEUDS" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#T|org.eventb.core.guard#("/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#T|org.eventb.core.guard#("/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTHYPMessagesArrive~*"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="Arriver/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="103">
+    <org.eventb.core.poSequent name="Arriver/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTALLHYPMessagesArrive~"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="MessagesArrives∪{m}⊆Messages" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.invariant#V"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?"/>
@@ -207,7 +207,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poSequent#Arriver\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTMessagesArrive~" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="101">
+    <org.eventb.core.poPredicateSet name="EVTIDENTMessagesArrive~" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="MessagesArrives'" org.eventb.core.type="ℙ(MESSAGES)"/>
         <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
         <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
@@ -220,10 +220,10 @@
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPMessagesArrive~" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTHYPMessagesArrive~*" org.eventb.core.poStamp="103">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPMessagesArrive~" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#EVTHYPMessagesArrive~*" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)=Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#T|org.eventb.core.guard#("/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="99">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/N7_DSR/DSR_1.bpo|org.eventb.core.poFile#DSR_1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="MessagesArrives⊆Messages" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.invariant#V"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
