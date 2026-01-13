@@ -35,6 +35,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Envoyer">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd8" org.eventb.core.predicate="m ∉ MessagesArrives"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="R" org.eventb.core.comment="Ce raffinage distingue Recevoir et Arriver" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Recevoir">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
