@@ -81,7 +81,7 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="a" org.eventb.core.comment="BIDIRECTIONNEL " org.eventb.core.identifier="TableRoutage"/>
     <org.eventb.core.invariant name="b" org.eventb.core.label="inv3" org.eventb.core.predicate="TableRoutage ∈ Noeuds → Routes"/>
-    <org.eventb.core.invariant name="c" org.eventb.core.comment="le premier " org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,r·(n ∈ Noeuds ∧ n↦r ∈ TableRoutage ⇒ 0↦n ∈ r)"/>
+    <org.eventb.core.invariant name="c" org.eventb.core.comment="le premier noeud de chaque route dans les tables de routage de n = n" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,r·(n ∈ Noeuds ∧ n↦r ∈ TableRoutage ⇒ 0↦n ∈ r)"/>
     <org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjouterRouteDansTable">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
