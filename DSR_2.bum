@@ -13,11 +13,11 @@
     <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
     <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
         <org.eventb.core.action name="'" org.eventb.core.assignment="Routes ≔ ∅" org.eventb.core.label="act12"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutage ≔ ∅" org.eventb.core.label="act13"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutageLocale ≔ ∅" org.eventb.core.label="act13"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutage(n) ≔ ∅" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutageLocale(n) ≔ ∅" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionNoeud"/>
@@ -77,17 +77,17 @@
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="Routes ≔ Routes ∖ {r}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="TableRoutage ≔ TableRoutage ⩥ {r} " org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="TableRoutageLocale ≔ TableRoutageLocale ⩥ {r} " org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.variable name="a" org.eventb.core.comment="BIDIRECTIONNEL " org.eventb.core.identifier="TableRoutage"/>
-    <org.eventb.core.invariant name="b" org.eventb.core.label="inv3" org.eventb.core.predicate="TableRoutage ∈ Noeuds → Routes"/>
-    <org.eventb.core.invariant name="c" org.eventb.core.comment="le premier noeud de chaque route dans les tables de routage de n = n" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,r·(n ∈ Noeuds ∧ n↦r ∈ TableRoutage ⇒ 0↦n ∈ r)"/>
+    <org.eventb.core.variable name="a" org.eventb.core.comment="BIDIRECTIONNEL " org.eventb.core.identifier="TableRoutageLocale"/>
+    <org.eventb.core.invariant name="b" org.eventb.core.label="inv3" org.eventb.core.predicate="TableRoutageLocale ∈ Noeuds → Routes"/>
+    <org.eventb.core.invariant name="c" org.eventb.core.comment="le premier noeud de chaque route dans les tables de routage de n = n" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,r·(n ∈ Noeuds ∧ n↦r ∈ TableRoutageLocale ⇒ 0↦n ∈ r)"/>
     <org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjouterRouteDansTable">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∈ Noeuds"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="TableRoutage ≔ TableRoutage ∪ {n ↦ r}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="TableRoutageLocale ≔ TableRoutageLocale ∪ {n ↦ r}" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="r(0) = n"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>
