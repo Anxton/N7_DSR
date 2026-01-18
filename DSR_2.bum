@@ -17,11 +17,11 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutageLocale(n) ≔ ∅" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionNoeud"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd7" org.eventb.core.predicate="∀r, hop·(r ∈ Routes ∧ hop ∈ r ⇒ prj2(hop) ≠ n)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.comment="on ne supprime pas un noeud dans une route" org.eventb.core.label="grd7" org.eventb.core.predicate="∀r,x,n1·(r ∈ Routes ∧ x ∈ ℕ ∧ n1 ∈ Noeuds ∧ x ↦ n1  ∈ r &#13;&#10;&#9;&#9;⇒ n1 ≠ n)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd8" org.eventb.core.predicate="n ∉ dom(TableRoutageLocale)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutLien">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutLien"/>
@@ -48,31 +48,39 @@
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Arriver"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="U" org.eventb.core.identifier="MessagesArrives"/>
-    <org.eventb.core.invariant name="V" org.eventb.core.comment="Local : les liens n'existent pas forcement" org.eventb.core.label="inv1" org.eventb.core.predicate="Routes ∈ ℙ(ℕ ⇸ Noeuds)"/>
+    <org.eventb.core.invariant name="V" org.eventb.core.comment="Routes ressemble à { route1, route2} où routei = {0↦n1,1↦n2}" org.eventb.core.label="inv1" org.eventb.core.predicate="Routes ∈ ℙ(ℕ ⇸ Noeuds)"/>
     <org.eventb.core.variable name="W" org.eventb.core.comment="Ensemble qui contient les routes qu'on fabrique à la main pour les mettre dans TableRoutage (inutil plus tard) &#10;UNIDIRECTIONNEL" org.eventb.core.identifier="Routes"/>
-    <org.eventb.core.event name="Y" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreerRoute">
+    <org.eventb.core.event name="Y" org.eventb.core.comment="doit disparaitre selon moi" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CreerRoute">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="noeudBase"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="noeudBase ∈ Noeuds"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="Routes ≔ Routes ∪ {{0↦noeudBase}}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.comment="on ne crée pas une route en double" org.eventb.core.label="grd2" org.eventb.core.predicate="∀r·(r ∈ Routes ⇒ r ≠ {0 ↦ noeudBase})"/>
+        <org.eventb.core.guard name="+" org.eventb.core.comment="théorème pour aider l'autoprouveur pour inv2" org.eventb.core.label="grd3" org.eventb.core.predicate="∃k·(k ∈ ℕ ∧ k &gt; 0 ∧ dom({0 ↦ noeudBase}) = 0‥(k−1))" org.eventb.core.theorem="true"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="]" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AppendNoeudRoute">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="Routes ≔ (Routes ∖ {r}) ∪ {r ∪ {(card(r)) ↦ n}}" org.eventb.core.comment="r auquel j'ajoute, (card(r))↦n" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="Routes ≔ (Routes ∖ {r}) ∪ {r ∪ {i ↦ n}}" org.eventb.core.comment="r auquel j'ajoute, (card(r))↦n" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∈ Noeuds"/>
-        <org.eventb.core.guard name="," org.eventb.core.comment="n accessible: n dans lien (r(card(r)-1) -&gt; n)" org.eventb.core.label="grd3" org.eventb.core.predicate="(r(card(r)−1) ↦ n) ∈ Liens"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="∃k·(k ∈ ℕ ∧ k &gt; 0 ∧ dom(r) = 0‥(k−1))"/>
+        <org.eventb.core.guard name="/" org.eventb.core.comment="on ne peut pas modifier une route dans la table de routage" org.eventb.core.label="grd4" org.eventb.core.predicate="i = card(dom(r))"/>
+        <org.eventb.core.parameter name="3" org.eventb.core.identifier="i"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd5" org.eventb.core.predicate="i ∉ dom(r)"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="r ∉ ran(TableRoutageLocale)"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd7" org.eventb.core.predicate="∃j·( j ∈ dom(r) ∧ (∀t·(t ∈ dom(r) ⇒ t ≤ j)) ∧ r(j) ↦ n ∈ Liens )"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="^" org.eventb.core.comment="appelé lorsque un noeud recoit l'info qu'il n'y a plus ce hop/lien possible" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SupprimerNoeudRoute">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∈ Noeuds"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="n ∈ ran(r)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.comment="l'élément doit exister" org.eventb.core.label="grd3" org.eventb.core.predicate="i ∈ dom(r) ∧ r(i) = n"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="Routes ≔ (Routes ∖ {r}) ∪ {r ⩥ {n}}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="-" org.eventb.core.comment="r(0) est le noeud a laquelle appartient la route" org.eventb.core.label="grd4" org.eventb.core.predicate="n ≠ r(0)"/>
+        <org.eventb.core.guard name="." org.eventb.core.comment="on ne peut pas supprimer autre chose que le dernier élément de la route" org.eventb.core.label="grd4" org.eventb.core.predicate="∀j·(j ∈ dom(r) ⇒ j ≤ i)"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="r ∉ ran(TableRoutageLocale)"/>
+        <org.eventb.core.parameter name="1" org.eventb.core.identifier="i"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="_" org.eventb.core.label="inv2" org.eventb.core.predicate="∀r·(r ∈ Routes ⇒ dom(r) ⊆ 0‥card(r))"/>
     <org.eventb.core.event name="`" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SupprimerRoute">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
@@ -80,14 +88,20 @@
         <org.eventb.core.action name="*" org.eventb.core.assignment="TableRoutageLocale ≔ TableRoutageLocale ⩥ {r} " org.eventb.core.label="act2"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="a" org.eventb.core.comment="BIDIRECTIONNEL " org.eventb.core.identifier="TableRoutageLocale"/>
-    <org.eventb.core.invariant name="b" org.eventb.core.label="inv3" org.eventb.core.predicate="TableRoutageLocale ∈ Noeuds → Routes"/>
-    <org.eventb.core.invariant name="c" org.eventb.core.comment="le premier noeud de chaque route dans les tables de routage de n = n" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,r·(n ∈ Noeuds ∧ n↦r ∈ TableRoutageLocale ⇒ 0↦n ∈ r)"/>
+    <org.eventb.core.invariant name="b" org.eventb.core.comment="on veut des routes sans trous donc pas de {0-&gt;n1 , 2-&gt;n2}" org.eventb.core.label="inv2" org.eventb.core.predicate="∀r·(r ∈ Routes ⇒ (r = ∅ ∨ &#13;&#10;&#9;&#9;&#9;&#9;   (0 ∈ dom(r) ∧ ∀i·(i ∈ dom(r) ⇒ 0‥i ⊆ dom(r))))&#13;&#10;&#9;&#9;&#9;&#9;  )"/>
     <org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AjouterRouteDansTable">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="n"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∈ Noeuds"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="TableRoutageLocale ≔ TableRoutageLocale ∪ {n ↦ r}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="r(0) = n"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="TableRoutageLocale ≔ TableRoutageLocale ∪ {r(0) ↦ r}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="-" org.eventb.core.comment="la route n'est pas déjà dans la table" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∉ ran(TableRoutageLocale) "/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="0 ∈ dom(r)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="e" org.eventb.core.comment="Local : les liens n'existent pas forcementroutage de n = n&#13;&#10;on met une fonction partiel pour simplifier les prouveurs mais on pourrait mettre total&#13;&#10;pas de fonction partielle car on veut que pour un noeud il y est plusieurs routes possible" org.eventb.core.label="inv3" org.eventb.core.predicate="TableRoutageLocale ⊆ Noeuds × Routes "/>
+    <org.eventb.core.invariant name="f" org.eventb.core.comment="le premier noeud de chaque route dans les tables de " org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,r·(n ↦ r ∈ TableRoutageLocale ⇒ 0 ↦ n ∈ r)"/>
+    <org.eventb.core.event name="g" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SupprimerRouteTable">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ Routes"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∈ ran(TableRoutageLocale) "/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="TableRoutageLocale ≔ TableRoutageLocale ⩥ {r}" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>

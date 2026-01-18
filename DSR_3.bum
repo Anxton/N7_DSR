@@ -20,10 +20,13 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="Y" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutage(n) ≔ ∅" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutage ≔ TableRoutage ∪ {n ↦ ∅}" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="n ↦ ∅ ∈ Noeuds × ran(Header) "/>
     </org.eventb.core.event>
     <org.eventb.core.event name="Z" org.eventb.core.comment="inutile : + cohérent de supprimer tous les liens du noeud" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionNoeud"/>
+        <org.eventb.core.guard name="(" org.eventb.core.comment="on ne supprime pas les noeuds dans un Header" org.eventb.core.label="grd9" org.eventb.core.predicate="∀ m · (m ∈ dom(Header) ⇒ n ∉ ran(Header(m)))"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="n ∉ dom(TableRoutage)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="[" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutLien">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutLien"/>
@@ -122,12 +125,15 @@
     <org.eventb.core.event name="{" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjouterRouteDansTable">
         <org.eventb.core.refinesEvent name="(" org.eventb.core.target="AjouterRouteDansTable"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="|" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UpdateTableRoutage">
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="m"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="m ∈ MessagesArrives"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="TypeMessage(m) = RREP"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="TableRoutage(Destination(m)) ≔ TableRoutage(Destination(m)) ∪ Header(m)" org.eventb.core.label="act1"/>
+    <org.eventb.core.event name="|" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SupprimerRouteTable">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SupprimerRouteTable"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="}" org.eventb.core.identifier="TableRoutage"/>
-    <org.eventb.core.invariant name="~" org.eventb.core.label="inv4" org.eventb.core.predicate="TableRoutage ∈ Noeuds → ran(Header) "/>
+    <org.eventb.core.invariant name="~" org.eventb.core.label="inv4" org.eventb.core.predicate="TableRoutage ⊆ Noeuds × ran(Header) "/>
+    <org.eventb.core.event name="''" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UpdateTableRoutage">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="m ∈ MessagesArrives"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="TypeMessage(m) = RREP"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="TableRoutage(Destination(m)) ≔ TableRoutage(Destination(m)) ∪ Header(m)" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>
