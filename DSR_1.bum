@@ -17,9 +17,6 @@
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionNoeud">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionNoeud"/>
-    </org.eventb.core.event>
     <org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutLien">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutLien"/>
     </org.eventb.core.event>

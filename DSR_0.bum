@@ -20,16 +20,6 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="Noeuds ≔ Noeuds ∪ {n}" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∉ Noeuds"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SuppressionNoeud">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="n"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="n ∈ Noeuds"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="Noeuds ≔ Noeuds ∖ {n}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="n ∉ dom(Liens) ∪ ran(Liens)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="n ∉ ran(Source)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="n ∉ ran(Destination)"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="n ∉ ran(StockNoeud)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="n ∉ ran(EnTransitVers)"/>
-    </org.eventb.core.event>
     <org.eventb.core.variable name="-" org.eventb.core.identifier="Messages"/>
     <org.eventb.core.variable name="." org.eventb.core.identifier="Liens"/>
     <org.eventb.core.invariant name="0" org.eventb.core.label="inv2" org.eventb.core.predicate="Messages ⊆ MESSAGES"/>
