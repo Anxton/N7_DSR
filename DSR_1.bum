@@ -12,7 +12,7 @@
     <org.eventb.core.variable name="G" org.eventb.core.identifier="MessagesPerdus"/>
     <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
     <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="MessagesArrives ≔ ∅" org.eventb.core.label="act11"/>
+        <org.eventb.core.action name="'" org.eventb.core.assignment="MessagesArrives ≔ ∅" org.eventb.core.label="act12"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
@@ -32,7 +32,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Envoyer">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd8" org.eventb.core.predicate="m ∉ MessagesArrives"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd9" org.eventb.core.predicate="m ∉ MessagesArrives"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="R" org.eventb.core.comment="Ce raffinage distingue Recevoir et Arriver" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Recevoir">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
@@ -48,4 +48,5 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="U" org.eventb.core.identifier="MessagesArrives"/>
     <org.eventb.core.invariant name="V" org.eventb.core.label="inv1" org.eventb.core.predicate="MessagesArrives ⊆ Messages"/>
+    <org.eventb.core.variable name="W" org.eventb.core.identifier="NbSauts"/>
 </org.eventb.core.machineFile>

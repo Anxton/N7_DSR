@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="280" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="287" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="280" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="290" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjouterRouteDansTable/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="292" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjouterRouteDansTable/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="292" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjouterRouteDansTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="292" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SupprimerRouteTable/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="292" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SupprimerRouteTable/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="292" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SupprimerRouteTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="292" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="300" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="301" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="301" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

@@ -10,6 +10,7 @@
         <org.eventb.core.action name="." org.eventb.core.assignment="EnTransitVers ≔ ∅" org.eventb.core.label="act8"/>
         <org.eventb.core.action name="/" org.eventb.core.assignment="MessagesPerdus ≔ ∅" org.eventb.core.label="act9"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="MessagesLiens ≔ ∅" org.eventb.core.label="act10"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="NbSauts ≔ ∅" org.eventb.core.label="act11"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="DSR_ctx_0"/>
     <org.eventb.core.variable name=")" org.eventb.core.identifier="Noeuds"/>
@@ -55,6 +56,8 @@
         <org.eventb.core.action name="0" org.eventb.core.assignment="Destination ≔ Destination ∪ {m↦noeudDestination}" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="StockNoeud ≔ StockNoeud ∪ {m↦noeudSource}" org.eventb.core.label="act4"/>
         <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="noeudSource ≠ noeudDestination"/>
+        <org.eventb.core.action name="3" org.eventb.core.assignment="NbSauts ≔ NbSauts ∪ {m ↦ 0}" org.eventb.core.label="act5"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd6" org.eventb.core.predicate="m ∉ dom(NbSauts)"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="8" org.eventb.core.identifier="Source"/>
     <org.eventb.core.invariant name="9" org.eventb.core.label="inv5" org.eventb.core.predicate="Source ∈ Messages → Noeuds"/>
@@ -71,6 +74,7 @@
         <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="m ∉ MessagesPerdus"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="StockNoeud ≔ {m} ⩤ StockNoeud" org.eventb.core.label="act4"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="m ∉ dom(MessagesLiens)"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="NbSauts ≔ {m} ⩤ NbSauts " org.eventb.core.label="act5"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Envoyer">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
@@ -86,6 +90,8 @@
         <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="m  ∉ dom(EnTransitVers)"/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="MessagesLiens ≔ MessagesLiens ∪ {m↦(emetteur↦destinataire)}" org.eventb.core.label="act3"/>
         <org.eventb.core.guard name="3" org.eventb.core.label="grd7" org.eventb.core.predicate="m ∉ MessagesPerdus"/>
+        <org.eventb.core.action name="4" org.eventb.core.assignment="NbSauts(m) ≔ NbSauts(m) + 1 " org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd8" org.eventb.core.predicate="m ∈ dom(NbSauts)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Recevoir">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="m"/>
@@ -117,4 +123,6 @@
     <org.eventb.core.invariant name="H" org.eventb.core.label="inv11" org.eventb.core.predicate="dom(StockNoeud) ∩ dom(EnTransitVers) ∩ MessagesPerdus = ∅"/>
     <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
     <org.eventb.core.invariant name="J" org.eventb.core.label="inv12" org.eventb.core.predicate="dom(StockNoeud) ∪ dom(EnTransitVers) ∪ MessagesPerdus = Messages"/>
+    <org.eventb.core.variable name="K" org.eventb.core.identifier="NbSauts"/>
+    <org.eventb.core.invariant name="L" org.eventb.core.label="inv13" org.eventb.core.predicate="NbSauts ∈ Messages → ℕ"/>
 </org.eventb.core.machineFile>
