@@ -35,10 +35,17 @@
     <org.eventb.core.psStatus name="CreerRREP/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="508" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="CreerRREP/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="508" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="CreerRREP/act6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="508" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvoyerRREP/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="452" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="EnvoyerRREP/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="510" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ArriverRREP/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="452" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ArriverRREP/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="511" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="ArriverRREP/act5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="511" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="RecevoirRREP/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="452" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="EnvoyerRREPouRERRP/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="537" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="EnvoyerRREPouRERRP/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="538" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverRREPouRERRP/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="540" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverRREPouRERRP/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="541" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ArriverRREPouRERRP/act5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="541" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="RecevoirRREPouRERRP/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="539" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRERRP/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="536" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRERRP/grd11/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="536" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRERRP/grd12/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="536" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRERRP/grd13/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="536" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRERRP/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="536" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRERRP/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="536" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRERRP/act6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="536" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

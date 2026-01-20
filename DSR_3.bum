@@ -101,21 +101,21 @@
         <org.eventb.core.action name="." org.eventb.core.assignment="Header ≔ Header ∪ {m ↦ Header(rreq)}" org.eventb.core.label="act6"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd10" org.eventb.core.predicate="rreq ∈ dom(Header)"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="x" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvoyerRREP">
+    <org.eventb.core.event name="x" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvoyerRREPouRERRP">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd9" org.eventb.core.predicate="TypeMessage(m) = RREP"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd9" org.eventb.core.predicate="TypeMessage(m) ∈ {RREP,RERRP}"/>
         <org.eventb.core.guard name="+" org.eventb.core.comment="x la valeur du noeud source et x-1 la valeur où l'on veut envoyer le message" org.eventb.core.label="grd10" org.eventb.core.predicate="m ∈ dom(Header)"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd11" org.eventb.core.predicate="∀x,n·(x ↦ n ∈ (Header(m) ▷ {emetteur}) ⇒ (x − 1) ↦ destinataire ∈ Header(m))"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="y" org.eventb.core.comment="Permet de créer une entrée dans la table de routage sur bonne réception de RREP" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ArriverRREP">
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="TypeMessage(m) = RREP"/>
+    <org.eventb.core.event name="y" org.eventb.core.comment="Permet de créer une entrée dans la table de routage sur bonne réception de RREP" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ArriverRREPouRERRP">
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="TypeMessage(m) ∈ {RREP,RERRP}"/>
         <org.eventb.core.refinesEvent name="internal3" org.eventb.core.target="Arriver"/>
         <org.eventb.core.action name="internal4" org.eventb.core.assignment="RoutesTrouvees ≔ RoutesTrouvees ∪ {Header(m)} " org.eventb.core.label="act5"/>
         <org.eventb.core.guard name="internal5" org.eventb.core.label="grd7" org.eventb.core.predicate="m ∈ dom(Header)"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="z" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="RecevoirRREP">
+    <org.eventb.core.event name="z" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="RecevoirRREPouRERRP">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="TypeMessage(m) = RREP"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="TypeMessage(m) ∈ {RREP,RERRP}"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="{" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjouterRouteDansTable">
         <org.eventb.core.refinesEvent name="(" org.eventb.core.target="AjouterRouteDansTable"/>
@@ -129,4 +129,18 @@
     <org.eventb.core.invariant name="')" org.eventb.core.label="inv3" org.eventb.core.predicate="RoutesTrouvees ∈ ℙ(ℕ ⇸ Noeuds)"/>
     <org.eventb.core.variable name="'*" org.eventb.core.identifier="SautsMax"/>
     <org.eventb.core.invariant name="'+" org.eventb.core.label="inv4" org.eventb.core.predicate="SautsMax ∈ ℕ"/>
+    <org.eventb.core.event name="'," org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CreerRERRP">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutMessage"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="donnee ∈ Messages"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd7" org.eventb.core.predicate="donnee ∈ dom(Header)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd8" org.eventb.core.predicate="TypeMessage(donnee) = DONNEES"/>
+        <org.eventb.core.parameter name="." org.eventb.core.identifier="donnee"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd9" org.eventb.core.predicate="donnee ∉ MessagesArrives"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd10" org.eventb.core.predicate="donnee ∈ dom(StockNoeud)"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="TypeMessage ≔ TypeMessage ∪ {m ↦ RERRP}" org.eventb.core.label="act5"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd11" org.eventb.core.predicate="noeudSource = StockNoeud(donnee)"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd12" org.eventb.core.predicate="noeudDestination = Source(donnee) "/>
+        <org.eventb.core.action name="4" org.eventb.core.assignment="Header ≔ Header ∪ {m ↦ Header(donnee)}" org.eventb.core.label="act6"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd13" org.eventb.core.predicate="∀pre,suc·(pre ∈ Header(donnee) ∧ suc ∈ Header(donnee) ∧ prj2(pre) = StockNoeud(donnee) ∧ prj1(pre) = prj1(suc) − 1 &#13;&#10; ⇒ prj2(pre) ↦ prj2(suc) ∉ Liens)"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>
