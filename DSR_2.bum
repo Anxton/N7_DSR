@@ -12,8 +12,8 @@
     <org.eventb.core.variable name="G" org.eventb.core.identifier="MessagesPerdus"/>
     <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
     <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutageLocale ≔ ∅" org.eventb.core.label="act13"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="Routes ≔ {∅}" org.eventb.core.label="act14"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="TableRoutageLocale ≔ ∅" org.eventb.core.label="act15"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="Routes ≔ {∅}" org.eventb.core.label="act16"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
@@ -28,6 +28,15 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutMessage"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PreDuplicationMessage">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="PreDuplicationMessage"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="m" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DupliquerMessage">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="DupliquerMessage"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DiffuserMessage">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="DiffuserMesage"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionMessage"/>
@@ -83,4 +92,5 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="h" org.eventb.core.identifier="NbSauts"/>
     <org.eventb.core.variable name="i" org.eventb.core.identifier="Routes"/>
+    <org.eventb.core.variable name="n" org.eventb.core.identifier="DestDuplicat"/>
 </org.eventb.core.machineFile>

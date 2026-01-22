@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="19">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="MESSAGES" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="SAUTSMAX" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="SAUTSMAY" org.eventb.core.predicate="finite(NOEUDS)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#("/>
+        <org.eventb.core.poPredicate name="SAUTSMAZ" org.eventb.core.predicate="finite(MESSAGES)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#*"/>
+        <org.eventb.core.poPredicate name="SAUTSMA[" org.eventb.core.predicate="SAUTSMAX=10" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="SAUTSMA\" org.eventb.core.predicate="finite(0 ‥ SAUTSMAX)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#-"/>
+        <org.eventb.core.poIdentifier name="MESSAGETYPE" org.eventb.core.type="ℙ(MESSAGETYPE)"/>
+        <org.eventb.core.poIdentifier name="DONNEES" org.eventb.core.type="MESSAGETYPE"/>
+        <org.eventb.core.poIdentifier name="RREQ" org.eventb.core.type="MESSAGETYPE"/>
+        <org.eventb.core.poIdentifier name="RREP" org.eventb.core.type="MESSAGETYPE"/>
+        <org.eventb.core.poIdentifier name="RERRP" org.eventb.core.type="MESSAGETYPE"/>
+        <org.eventb.core.poPredicate name="MESSAGETYPF" org.eventb.core.predicate="partition(MESSAGETYPE,{RREP},{RREQ},{RERRP},{DONNEES})" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.axiom#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="Routes" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="MessagesPerdus" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="Liens" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="LienCasse" org.eventb.core.type="ℙ(MESSAGES×ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="DonneeBloquee" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="LienRREQetRREP" org.eventb.core.type="ℙ(MESSAGES×MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="TableRoutageLocale" org.eventb.core.type="ℙ(NOEUDS×ℙ(ℙ(ℤ×NOEUDS)))"/>
+        <org.eventb.core.poIdentifier name="MessagesArrives" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="DestDuplicat" org.eventb.core.type="ℙ(ℙ(MESSAGES×NOEUDS)×ℙ(MESSAGES×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="TypeMessage" org.eventb.core.type="ℙ(MESSAGES×MESSAGETYPE)"/>
+        <org.eventb.core.poIdentifier name="NbSauts" org.eventb.core.type="ℙ(MESSAGES×ℤ)"/>
+        <org.eventb.core.poIdentifier name="Messages" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="Destination" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="Noeuds" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="RoutesTrouvee" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="Header" org.eventb.core.type="ℙ(MESSAGES×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="StockNoeud" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="Source" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalf" org.eventb.core.predicate="Noeuds⊆NOEUDS" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#*"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalg" org.eventb.core.predicate="Messages⊆MESSAGES" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#0"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalh" org.eventb.core.predicate="Liens∈Noeuds ↔ Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocali" org.eventb.core.predicate="Source∈Messages → Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#9"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalj" org.eventb.core.predicate="Destination∈Messages → Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#;"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalk" org.eventb.core.predicate="StockNoeud∈Messages ⇸ Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#B"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocall" org.eventb.core.predicate="EnTransitVers∈Messages ⇸ Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#D"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalm" org.eventb.core.predicate="MessagesPerdus⊆Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#E"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocaln" org.eventb.core.predicate="MessagesLiens∈dom(EnTransitVers) → Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#F"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalo" org.eventb.core.predicate="dom(StockNoeud)∩dom(EnTransitVers)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#H"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalp" org.eventb.core.predicate="dom(StockNoeud)∪dom(EnTransitVers)∪MessagesPerdus=Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#J"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalq" org.eventb.core.predicate="NbSauts∈Messages → ℕ" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#L"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalr" org.eventb.core.predicate="DestDuplicat∈(Messages ⇸ Noeuds) ⇸ (Messages ⇸ Noeuds)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.invariant#Q"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocals" org.eventb.core.predicate="MessagesArrives⊆Messages" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.invariant#V"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalt" org.eventb.core.predicate="Routes∈ℙ(0 ‥ SAUTSMAX ⇸ Noeuds)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.invariant#b"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalu" org.eventb.core.predicate="∀r⦂ℙ(ℤ×NOEUDS)·r∈Routes⇒r=(∅ ⦂ ℙ(ℤ×NOEUDS))∨(finite(dom(r))∧0 ‥ card(dom(r)) − 1=dom(r))" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.invariant#e"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalv" org.eventb.core.predicate="TableRoutageLocale∈Noeuds → ℙ(Routes)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.invariant#f"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalw" org.eventb.core.predicate="Header∈Messages → (0 ‥ SAUTSMAX ⇸ Noeuds)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.invariant#p"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalx" org.eventb.core.predicate="TypeMessage∈Messages → MESSAGETYPE" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.invariant#r"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocaly" org.eventb.core.predicate="DonneeBloquee⊆Messages" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.invariant#'."/>
+        <org.eventb.core.poPredicate name="TableRoutageLocalz" org.eventb.core.predicate="LienCasse∈DonneeBloquee ⇸ (Noeuds ⇸ Noeuds)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.invariant#'0"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocal{" org.eventb.core.predicate="RoutesTrouvee∈ℙ(0 ‥ SAUTSMAX ⇸ Noeuds)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.invariant#':"/>
+        <org.eventb.core.poPredicate name="TableRoutageLocal|" org.eventb.core.predicate="LienRREQetRREP∈Messages ⇸ Messages" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.invariant#'="/>
+        <org.eventb.core.poPredicate name="TableRoutageLocal}" org.eventb.core.predicate="∀m1⦂MESSAGES,m2⦂MESSAGES·m1 ↦ m2∈LienRREQetRREP⇒TypeMessage(m1)=RREQ∧TypeMessage(m2)=RREP" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.invariant#'&gt;"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalf" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="Noeuds'" org.eventb.core.type="ℙ(NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="TableRoutageLocale'" org.eventb.core.type="ℙ(NOEUDS×ℙ(ℙ(ℤ×NOEUDS)))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalf" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalf" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="n∈NOEUDS" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#+|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n∉Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#+|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×NOEUDS))∈Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#K|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalg" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="n2" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="Liens'" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="n1" org.eventb.core.type="NOEUDS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalg" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalg" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="n1∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#3|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n2∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#3|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n1 ↦ n2∉Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#3|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="n1≠n2" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#3|org.eventb.core.guard#\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalh" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="MessagesPerdus'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="Liens'" org.eventb.core.type="ℙ(NOEUDS×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="l" org.eventb.core.type="NOEUDS×NOEUDS"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalh" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalh" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀m⦂MESSAGES·m ↦ l∈MessagesLiens⇒m∉dom(StockNoeud)∧m∉MessagesPerdus∧m ↦ (prj2 ⦂ ℙ(NOEUDS×NOEUDS×NOEUDS))(l)∈EnTransitVers∧m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#4|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="l∈Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#4|org.eventb.core.guard#4"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocali" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="Source'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="TypeMessage'" org.eventb.core.type="ℙ(MESSAGES×MESSAGETYPE)"/>
+        <org.eventb.core.poIdentifier name="NbSauts'" org.eventb.core.type="ℙ(MESSAGES×ℤ)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="Header'" org.eventb.core.type="ℙ(MESSAGES×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="Messages'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="Destination'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="LienCasse'" org.eventb.core.type="ℙ(MESSAGES×ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocali" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocali" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∈dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∉dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∉MessagesPerdus" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#."/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="m∉dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#=|org.eventb.core.guard#1"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="m∉MessagesArrives" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#P|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="m∉DonneeBloquee" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#^|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="m∉dom(LienRREQetRREP)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#^|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="m∉ran(LienRREQetRREP)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#^|org.eventb.core.guard#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalj" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="destinataire" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="NbSauts'" org.eventb.core.type="ℙ(MESSAGES×ℤ)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="emetteur" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalj" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalj" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="emetteur∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destinataire∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="emetteur ↦ destinataire∈Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="m ↦ emetteur∈StockNoeud" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="m∉dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#1"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="m∉MessagesPerdus" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="m∈dom(NbSauts)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#5"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="m∉MessagesArrives" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#Q|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="TypeMessage(m)=DONNEES" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#_|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="m∈dom(Header)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#_|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="∀pre⦂ℤ×NOEUDS,suc⦂ℤ×NOEUDS·pre∈Header(m)∧suc∈Header(m)∧(prj2 ⦂ ℙ(ℤ×NOEUDS×NOEUDS))(pre)=emetteur∧(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(pre)=(prj1 ⦂ ℙ(ℤ×NOEUDS×ℤ))(suc) − 1⇒(prj2 ⦂ ℙ(ℤ×NOEUDS×NOEUDS))(suc)=destinataire" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#_|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalk" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalk" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalk" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)≠Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#R|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TypeMessage(m)∈{DONNEES,RREP}" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#`|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocall" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="MessagesArrives'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocall" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocall" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)=Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#T|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TypeMessage(m)=DONNEES" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#b|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalm" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="DonneeBloquee'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℙ(ℤ×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="Header'" org.eventb.core.type="ℙ(MESSAGES×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="LienCasse'" org.eventb.core.type="ℙ(MESSAGES×ℙ(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalm" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalm" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="n∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∈dom(LienCasse)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="n=StockNoeud(m)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="TypeMessage(m)=DONNEES" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="0 ↦ n∈r" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="r∈TableRoutageLocale(n)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#7"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="(0 ‥ NbSauts(m) ◁ Header(m))∪{x⦂ℤ,d⦂ℤ,n1⦂NOEUDS·x ↦ n1∈{0} ⩤ r∧d=NbSauts(m) ∣ x+d ↦ n1}∈0 ‥ SAUTSMAX ⇸ Noeuds" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'2|org.eventb.core.guard#8"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocaln" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="MessagesPerdus'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocaln" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocaln" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#@|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#@|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#@|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#@|org.eventb.core.guard#-"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="DupliquerRREQ/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rreqO∈dom(StockNoeud)∧StockNoeud∈MESSAGES ⇸ NOEUDS" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#."/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#."/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo)"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo*"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rreqO∈dom(TypeMessage)∧TypeMessage∈MESSAGES ⇸ MESSAGETYPE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal2"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal2"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo*"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite({src} ◁ Liens)∧(∀rreq⦂MESSAGES·rreq∈StockNoeud∼[{src}]⇒rreq∈dom(TypeMessage)∧TypeMessage∈MESSAGES ⇸ MESSAGETYPE∧(TypeMessage(rreq)=RREQ⇒rreq∈dom(Header)∧Header∈MESSAGES ⇸ ℙ(ℤ × NOEUDS)∧rreqO∈dom(Header)))∧finite({rreq⦂MESSAGES·rreq∈StockNoeud∼[{src}]∧TypeMessage(rreq)=RREQ∧Header(rreq)=Header(rreqO) ∣ rreq})" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal6"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal6"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo,"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rreqO∈dom(Source)∧Source∈MESSAGES ⇸ NOEUDS" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#-"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#-"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rreqO∈dom(Destination)∧Destination∈MESSAGES ⇸ NOEUDS" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#0"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/act5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rreqO∈dom(NbSauts)∧NbSauts∈MESSAGES ⇸ ℤ" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#3"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/act7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="rreqO∈dom(Header)∧Header∈MESSAGES ⇸ ℙ(ℤ × NOEUDS)" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#internal1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#internal1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/TypeMessage/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TypeMessage∪{rreqD ↦ RREQ}=TypeMessage" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#+"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poSequent#DupliquerRREQ\/TypeMessage\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/NbSauts/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="NbSauts∪{rreqD ↦ NbSauts(rreqO)}=NbSauts" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poSequent#DupliquerRREQ\/NbSauts\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/Messages/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Messages∪{rreqD}=Messages" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poSequent#DupliquerRREQ\/Messages\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/Destination/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Destination∪{rreqD ↦ Destination(rreqO)}=Destination" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poSequent#DupliquerRREQ\/Destination\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/Header/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Header∪{rreqD ↦ Header(rreqO)}=Header" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#internal1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poSequent#DupliquerRREQ\/Header\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/StockNoeud/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="StockNoeud∪{rreqD ↦ src}=StockNoeud" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poSequent#DupliquerRREQ\/StockNoeud\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DupliquerRREQ/Source/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalo"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Source∪{rreqD ↦ Source(rreqO)}=Source" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.action#-"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poSequent#DupliquerRREQ\/Source\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalo" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="Source'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="TypeMessage'" org.eventb.core.type="ℙ(MESSAGES×MESSAGETYPE)"/>
+        <org.eventb.core.poIdentifier name="NbSauts'" org.eventb.core.type="ℙ(MESSAGES×ℤ)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="Header'" org.eventb.core.type="ℙ(MESSAGES×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="Messages'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="rreqD" org.eventb.core.type="MESSAGES"/>
+        <org.eventb.core.poIdentifier name="Destination'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="rreqO" org.eventb.core.type="MESSAGES"/>
+        <org.eventb.core.poIdentifier name="src" org.eventb.core.type="NOEUDS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPTableRoutageLocalo)" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalo" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="rreqD∈MESSAGES" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rreqD∉Messages" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="rreqO∈Messages" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal4"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPTableRoutageLocalo*" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo)" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="src=StockNoeud(rreqO)" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPTableRoutageLocalo," org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo*" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="TypeMessage(rreqO)=RREQ" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal2"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="rreqO∉MessagesArrives" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal5"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalo" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalo," org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="card({src} ◁ Liens) − card({rreq⦂MESSAGES·rreq∈StockNoeud∼[{src}]∧TypeMessage(rreq)=RREQ∧Header(rreq)=Header(rreqO) ∣ rreq})&gt;0" org.eventb.core.source="/N7_DSR/DSR_4.bum|org.eventb.core.machineFile#DSR_4|org.eventb.core.event#'V|org.eventb.core.guard#internal6"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalp" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalq" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="MessagesArrives'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="Header'" org.eventb.core.type="ℙ(MESSAGES×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalq" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalq" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)=Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#T|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TypeMessage(m)=RREQ" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#n|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="Header(m)∪{card(dom(Header(m))) ↦ Destination(m)}∈0 ‥ SAUTSMAX ⇸ Noeuds" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#n|org.eventb.core.guard#3"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalr" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="Header'" org.eventb.core.type="ℙ(MESSAGES×ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalr" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalr" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)≠Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#R|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TypeMessage(m)=RREQ" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#s|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="Header(m)∪{card(dom(Header(m))) ↦ EnTransitVers(m)}∈0 ‥ SAUTSMAX ⇸ Noeuds" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#s|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocals" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="destinataire" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="NbSauts'" org.eventb.core.type="ℙ(MESSAGES×ℤ)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="emetteur" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocals" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocals" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="emetteur∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destinataire∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="emetteur ↦ destinataire∈Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="m ↦ emetteur∈StockNoeud" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="m∉dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#1"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="m∉MessagesPerdus" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="m∈dom(NbSauts)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#5"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="m∉MessagesArrives" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#Q|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="TypeMessage(m)=RREQ" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#v|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="NbSauts(m)&lt;SAUTSMAX" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#v|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="destinataire∉ran(Header(m))" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#v|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalt" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="destinataire" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="NbSauts'" org.eventb.core.type="ℙ(MESSAGES×ℤ)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="emetteur" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalt" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalt" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="emetteur∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="destinataire∈Noeuds" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="emetteur ↦ destinataire∈Liens" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="m ↦ emetteur∈StockNoeud" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="m∉dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#1"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="m∉MessagesPerdus" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="m∈dom(NbSauts)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#&gt;|org.eventb.core.guard#5"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="m∉MessagesArrives" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#Q|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="TypeMessage(m)∈{RREP,RERRP}" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#x|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀x⦂ℤ,n⦂NOEUDS·x ↦ n∈Header(m) ▷ {emetteur}⇒x − 1 ↦ destinataire∈Header(m)" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#x|org.eventb.core.guard#,"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalu" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="MessagesArrives'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="RoutesTrouvee'" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalu" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalu" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)=Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#T|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TypeMessage(m)=RREP" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#y|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="Header(m)∈ℕ ⇸ Noeuds" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#y|org.eventb.core.guard#internal6"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalv" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalv" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalv" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)≠Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#R|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TypeMessage(m)∈{RREP,RERRP}" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#z|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalw" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="Routes'" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℙ(ℤ×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="nd" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="na" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="RoutesTrouvee'" org.eventb.core.type="ℙ(ℙ(ℤ×NOEUDS))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalw" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalw" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∉Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#l|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r∈0 ‥ SAUTSMAX ⇸ Noeuds" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#l|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="0 ↦ nd∈r" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#l|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="0 ‥ card(dom(r)) − 1=dom(r)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#l|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="card(dom(r)) − 1 ↦ na∈r" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#l|org.eventb.core.guard#1"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="na≠nd" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#l|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀n⦂NOEUDS·n∈ran(r)⇒finite(dom(r ▷ {n}))∧card(dom(r ▷ {n}))=1" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#l|org.eventb.core.guard#7"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="r∈RoutesTrouvee" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'7|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalx" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="n" org.eventb.core.type="NOEUDS"/>
+        <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℙ(ℤ×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="TableRoutageLocale'" org.eventb.core.type="ℙ(NOEUDS×ℙ(ℙ(ℤ×NOEUDS)))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalx" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalx" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∈Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n∈dom(TableRoutageLocale)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#6"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="r∉TableRoutageLocale(n)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="0 ↦ n∈r" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#1"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="{n ↦ r}∈Noeuds ⇸ Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="r∈Routes" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#{|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocaly" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℙ(ℤ×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="TableRoutageLocale'" org.eventb.core.type="ℙ(NOEUDS×ℙ(ℙ(ℤ×NOEUDS)))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocaly" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocaly" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∈Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#g|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r≠(∅ ⦂ ℙ(ℤ×NOEUDS))" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#g|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×NOEUDS))∈Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#g|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="{n⦂NOEUDS,routes⦂ℙ(ℙ(ℤ×NOEUDS)),r1⦂ℙ(ℤ×NOEUDS)·n ↦ routes∈TableRoutageLocale∧r1=r ∣ n ↦ routes ∖ {r1}}∈Noeuds → ℙ(Routes)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#g|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∃routes⦂ℙ(ℙ(ℤ×NOEUDS))·routes∈ran(TableRoutageLocale)∧r∈routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#g|org.eventb.core.guard#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTTableRoutageLocalz" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="19">
+        <org.eventb.core.poIdentifier name="MessagesArrives'" org.eventb.core.type="ℙ(MESSAGES)"/>
+        <org.eventb.core.poIdentifier name="StockNoeud'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="MessagesLiens'" org.eventb.core.type="ℙ(MESSAGES×(NOEUDS×NOEUDS))"/>
+        <org.eventb.core.poIdentifier name="EnTransitVers'" org.eventb.core.type="ℙ(MESSAGES×NOEUDS)"/>
+        <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalz" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#EVTIDENTTableRoutageLocalz" org.eventb.core.poStamp="19">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m∈Messages" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∉dom(StockNoeud)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#\/"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈dom(MessagesLiens)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#0"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m∈dom(EnTransitVers)" org.eventb.core.source="/N7_DSR/DSR_0.bum|org.eventb.core.machineFile#DSR_0|org.eventb.core.event#?|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="EnTransitVers(m)=Destination(m)" org.eventb.core.source="/N7_DSR/DSR_1.bum|org.eventb.core.machineFile#DSR_1|org.eventb.core.event#T|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="TypeMessage(m)=RERRP" org.eventb.core.source="/N7_DSR/DSR_3.bum|org.eventb.core.machineFile#DSR_3|org.eventb.core.event#'8|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/N7_DSR/DSR_4.bpo|org.eventb.core.poFile#DSR_4|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="19"/>
+</org.eventb.core.poFile>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="DupliquerRREQ/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/grd7/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/act5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/act7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/TypeMessage/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/NbSauts/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/Messages/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/Destination/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/Header/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/StockNoeud/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerRREQ/Source/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
