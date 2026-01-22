@@ -17,6 +17,7 @@
         <org.eventb.core.action name="+" org.eventb.core.assignment="DonneeBloquee ≔ ∅" org.eventb.core.label="act17"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="LienCasse ≔ ∅" org.eventb.core.label="act18"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="RoutesTrouvee ≔ ∅" org.eventb.core.label="act19"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="LienRREQetRREP ≔ ∅" org.eventb.core.label="act20"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="Y" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AjoutNoeud">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutNoeud"/>
@@ -43,6 +44,8 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="Header ≔ {m} ⩤ Header" org.eventb.core.label="act7"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd7" org.eventb.core.predicate="m ∉ DonneeBloquee"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="LienCasse ≔ {m} ⩤ LienCasse " org.eventb.core.label="act8"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd8" org.eventb.core.predicate="m ∉ dom(LienRREQetRREP)"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd9" org.eventb.core.predicate="m ∉ ran(LienRREQetRREP)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvoyerDONNEES">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
@@ -113,6 +116,9 @@
         <org.eventb.core.guard name="," org.eventb.core.label="grd10" org.eventb.core.predicate="Destination(rreq) = noeudSource"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="TypeMessage ≔ TypeMessage ∪ {m ↦ RREP}" org.eventb.core.label="act6"/>
         <org.eventb.core.action name="." org.eventb.core.assignment="Header ≔ Header ∪ {m ↦ Header(rreq)}" org.eventb.core.label="act7"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd11" org.eventb.core.predicate="rreq ∉ dom(LienRREQetRREP)"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="LienRREQetRREP ≔ LienRREQetRREP ∪ {rreq ↦ m}" org.eventb.core.label="act8"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd12" org.eventb.core.predicate="m ∉ ran(LienRREQetRREP)"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="x" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvoyerRREPouRERRP">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
@@ -174,4 +180,7 @@
     <org.eventb.core.variable name="'6" org.eventb.core.identifier="RoutesTrouvee"/>
     <org.eventb.core.variable name="'9" org.eventb.core.identifier="NbSauts"/>
     <org.eventb.core.invariant name="':" org.eventb.core.label="inv5" org.eventb.core.predicate="RoutesTrouvee ∈ ℙ(0‥SAUTSMAX ⇸ Noeuds)"/>
+    <org.eventb.core.variable name="';" org.eventb.core.identifier="LienRREQetRREP"/>
+    <org.eventb.core.invariant name="'=" org.eventb.core.comment="Tout rrep est lié à un rreq et un seul" org.eventb.core.label="inv6" org.eventb.core.predicate="LienRREQetRREP ∈ Messages ⇸ Messages "/>
+    <org.eventb.core.invariant name="'&gt;" org.eventb.core.label="inv7" org.eventb.core.predicate="∀m1,m2·(m1 ∈ dom(LienRREQetRREP) ∧ m2 ∈ dom(LienRREQetRREP) &#13;&#10;&#9;⇒ TypeMessage(m1) = RREQ ∧ TypeMessage(m2) = RREP)"/>
 </org.eventb.core.machineFile>
