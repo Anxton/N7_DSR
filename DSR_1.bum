@@ -31,18 +31,18 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="X" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DupliquerMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="DupliquerMessage"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd11" org.eventb.core.predicate="mO ∉ MessagesArrives"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd17" org.eventb.core.predicate="mO ∉ MessagesArrives"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="[" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DiffuserMesage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="DiffuserMessage"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionMessage"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="m ∉ MessagesArrives"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="MessagesArrives ≔ MessagesArrives ∖ {m}" org.eventb.core.label="act6"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Envoyer">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Envoyer"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd9" org.eventb.core.predicate="m ∉ MessagesArrives"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd10" org.eventb.core.predicate="m ∉ MessagesArrives"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="R" org.eventb.core.comment="Ce raffinage distingue Recevoir et Arriver" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Recevoir">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>

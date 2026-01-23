@@ -93,4 +93,18 @@
     <org.eventb.core.variable name="h" org.eventb.core.identifier="NbSauts"/>
     <org.eventb.core.variable name="i" org.eventb.core.identifier="Routes"/>
     <org.eventb.core.variable name="n" org.eventb.core.identifier="DestDuplicat"/>
+    <org.eventb.core.event name="q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TronquerRouteTable">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="n ∈ dom(TableRoutageLocale)"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.comment="noeud à partir duquel on supprime la route" org.eventb.core.identifier="nt"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="nt ∈ Noeuds ∖ {n}"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="r ∈ TableRoutageLocale(n) ∧ r ≠ ∅"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.comment="noeud correspondant à la route" org.eventb.core.identifier="n"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="finite(dom(r)) ∧ dom(r) ⊆ 0‥SAUTSMAX"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="Routes ≔ (Routes ∖ {r}) ∪ {{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i}}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="." org.eventb.core.identifier="i"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="i ∈  dom(r ▷ {nt}) ∧ i ∈ ℕ"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i} ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
+        <org.eventb.core.action name="1" org.eventb.core.assignment="TableRoutageLocale(n) ≔ (TableRoutageLocale(n) ∖ {r}) ∪ &#13;&#10;&#9;{{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i}}" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>

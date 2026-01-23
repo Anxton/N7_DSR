@@ -2,8 +2,8 @@
 <org.eventb.core.psFile>
     <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="AjoutMessage/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="90" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="Recevoir/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="Arriver/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="Arriver/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>

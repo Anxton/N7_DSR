@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutLien/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutLien/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionLien/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionLien/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionLien/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionLien/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionLien/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionLien/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutLien/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutLien/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionLien/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionLien/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionLien/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionLien/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionLien/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionLien/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="AjoutMessage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="AjoutMessage/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="AjoutMessage/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
@@ -34,51 +34,56 @@
     <org.eventb.core.psStatus name="AjoutMessage/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="AjoutMessage/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="AjoutMessage/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SuppressionMessage/inv14/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Envoyer/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Envoyer/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Envoyer/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Envoyer/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Envoyer/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Envoyer/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Envoyer/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="PreDuplicationMessage/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="PreDuplicationMessage/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/act5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DupliquerMessage/act6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/grd1/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/inv8/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="44" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="44" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/inv12/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="44" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="42" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/act2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="42" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/act3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="42" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DiffuserMessage/act5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="42" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SuppressionMessage/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Envoyer/act4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PreDuplicationMessage/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PreDuplicationMessage/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="94" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="PreDuplicationMessage/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="95" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="81" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/grd16/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv12/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/inv14/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="96" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/act5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DupliquerMessage/act6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="96" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="67" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="67" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/inv8/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="83" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/inv10/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="83" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/inv12/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="83" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="83" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/act3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMessage/act5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="83" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="Recevoir/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="Recevoir/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="Recevoir/inv10/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
