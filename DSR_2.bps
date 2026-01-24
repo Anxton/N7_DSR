@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjoutNoeud/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CreerRoute/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CreerRoute/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CreerRoute/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="CreerRoute/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="CreerRoute/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjouterRouteTable/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjouterRouteTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="AjouterRouteTable/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SupprimerRouteTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="TronquerRouteTable/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="126" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="TronquerRouteTable/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="127" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="TronquerRouteTable/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="127" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="TronquerRouteTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="127" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="TronquerRouteTable/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="127" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="inv4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjoutNoeud/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRoute/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRoute/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRoute/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="CreerRoute/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="CreerRoute/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjouterRouteTable/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjouterRouteTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="AjouterRouteTable/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="AjouterRouteTable/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SupprimerRouteTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SupprimerRouteTable/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TronquerRouteTable/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TronquerRouteTable/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TronquerRouteTable/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TronquerRouteTable/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TronquerRouteTable/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="TronquerRouteTable/act2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="44" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

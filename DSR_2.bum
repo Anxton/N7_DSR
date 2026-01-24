@@ -8,7 +8,6 @@
     <org.eventb.core.variable name="8" org.eventb.core.identifier="Source"/>
     <org.eventb.core.variable name=":" org.eventb.core.identifier="Destination"/>
     <org.eventb.core.variable name="A" org.eventb.core.identifier="StockNoeud"/>
-    <org.eventb.core.variable name="C" org.eventb.core.identifier="EnTransitVers"/>
     <org.eventb.core.variable name="G" org.eventb.core.identifier="MessagesPerdus"/>
     <org.eventb.core.variable name="I" org.eventb.core.identifier="MessagesLiens"/>
     <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
@@ -58,12 +57,12 @@
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∉ Routes"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="Routes ≔ Routes ∪ {r}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="0 ↦ nd ∈ r"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="0 ↦ ns ∈ r"/>
         <org.eventb.core.guard name="," org.eventb.core.comment="contigu : " org.eventb.core.label="grd5" org.eventb.core.predicate="0‥(card(dom(r)) − 1) = dom(r) "/>
-        <org.eventb.core.parameter name="-" org.eventb.core.comment="noeud de départ de la route" org.eventb.core.identifier="nd"/>
-        <org.eventb.core.parameter name="." org.eventb.core.comment="noeud d'arrivée de la route" org.eventb.core.identifier="na"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="(card(dom(r)) − 1) ↦ na ∈ r "/>
-        <org.eventb.core.guard name="3" org.eventb.core.label="grd7" org.eventb.core.predicate="na ≠ nd"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.comment="noeud source de la route" org.eventb.core.identifier="ns"/>
+        <org.eventb.core.parameter name="." org.eventb.core.comment="noeud destination de la route" org.eventb.core.identifier="nd"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="(card(dom(r)) − 1) ↦ ns ∈ r "/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd7" org.eventb.core.predicate="ns ≠ nd"/>
         <org.eventb.core.guard name="7" org.eventb.core.label="grd8" org.eventb.core.predicate="∀n·(n ∈ ran(r) ⇒ finite(dom(r ▷ {n})) ∧ card(dom(r ▷ {n})) = 1)"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="U" org.eventb.core.identifier="MessagesArrives"/>
@@ -107,4 +106,5 @@
         <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i} ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="TableRoutageLocale(n) ≔ (TableRoutageLocale(n) ∖ {r}) ∪ &#13;&#10;&#9;{{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i}}" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
+    <org.eventb.core.invariant name="r" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,routes·(n ↦ routes ∈ TableRoutageLocale ⇒ (∀r·(r ∈ routes ⇒ r(0) = n)))"/>
 </org.eventb.core.machineFile>

@@ -7,13 +7,13 @@
         <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="SAUTSMAX=10" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
         <org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(0 ‥ SAUTSMAX)" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
         <org.eventb.core.scCarrierSet name="MESSAGES" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(MESSAGES)"/>
-        <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="SAUTSMAX" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.constant#+" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scConstant name="SAUTSMAX" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.constant#+" org.eventb.core.type="ℤ"/>
         <org.eventb.core.scCarrierSet name="NOEUDS" org.eventb.core.source="/N7_DSR/DSR_ctx_0.buc|org.eventb.core.contextFile#DSR_ctx_0|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(NOEUDS)"/>
     </org.eventb.core.scInternalContext>
     <org.eventb.core.scAxiom name="DSR_ctx_1" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(MESSAGETYPE,{RREP},{RREQ},{RERRP},{DONNEES})" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
-    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="DONNEES" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#." org.eventb.core.type="MESSAGETYPE"/>
-    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="RREQ" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#," org.eventb.core.type="MESSAGETYPE"/>
-    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="RREP" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#+" org.eventb.core.type="MESSAGETYPE"/>
+    <org.eventb.core.scConstant name="DONNEES" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#." org.eventb.core.type="MESSAGETYPE"/>
+    <org.eventb.core.scConstant name="RREQ" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#," org.eventb.core.type="MESSAGETYPE"/>
+    <org.eventb.core.scConstant name="RREP" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#+" org.eventb.core.type="MESSAGETYPE"/>
     <org.eventb.core.scCarrierSet name="MESSAGETYPE" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(MESSAGETYPE)"/>
-    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="RERRP" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#-" org.eventb.core.type="MESSAGETYPE"/>
+    <org.eventb.core.scConstant name="RERRP" org.eventb.core.source="/N7_DSR/DSR_ctx_3.buc|org.eventb.core.contextFile#DSR_ctx_3|org.eventb.core.constant#-" org.eventb.core.type="MESSAGETYPE"/>
 </org.eventb.core.scContextFile>

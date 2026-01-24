@@ -5,6 +5,6 @@
     <org.eventb.core.carrierSet name=")" org.eventb.core.identifier="MESSAGES"/>
     <org.eventb.core.axiom name="*" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(MESSAGES)"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="+" org.eventb.core.identifier="SAUTSMAX"/>
-    <org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="SAUTSMAX  = 10"/>
+    <org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="SAUTSMAX = 10"/>
     <org.eventb.core.axiom name="-" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(0‥SAUTSMAX)"/>
 </org.eventb.core.contextFile>
