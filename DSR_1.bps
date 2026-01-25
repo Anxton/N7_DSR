@@ -15,12 +15,12 @@
     <org.eventb.core.psStatus name="DupliquerMessage/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="DupliquerMessage/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="DupliquerMessage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMesage/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="54" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMesage/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="54" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMesage/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="54" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMesage/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="54" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DiffuserMesage/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="54" org.eventb.core.psManual="true"/>
-    <org.eventb.core.psStatus name="DiffuserMesage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="54" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMesage/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMesage/grd10/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMesage/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMesage/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DiffuserMesage/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="DiffuserMesage/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="SuppressionMessage/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="SuppressionMessage/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="SuppressionMessage/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="52" org.eventb.core.psManual="false"/>

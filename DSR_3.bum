@@ -180,8 +180,10 @@
         <org.eventb.core.refinesEvent name="(" org.eventb.core.target="AjouterRouteTable"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd8" org.eventb.core.predicate="r ∈ Routes"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="|" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SupprimerRouteTable">
+    <org.eventb.core.event name="|" org.eventb.core.comment="supprime une route car le lien est cassé" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SupprimerRouteTable">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SupprimerRouteTable"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="0 ∈ dom(r) ∧ 1 ∈ dom(r)"/>
+        <org.eventb.core.guard name=")" org.eventb.core.comment="la source ne peut pas atteindre le premier saut" org.eventb.core.label="grd7" org.eventb.core.predicate="r(0) ↦ r(1) ∉ Liens"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="'F" org.eventb.core.comment="Faudrait que ca supprime tous les hops et lienCasse" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="TronquerRouteTable">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="TronquerRouteTable"/>
@@ -197,7 +199,7 @@
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AjoutMessage"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd10" org.eventb.core.predicate="donnee ∈ Messages ∧ donnee ∈ dom(Header)"/>
         <org.eventb.core.guard name="?" org.eventb.core.label="grd11" org.eventb.core.predicate="TypeMessage(donnee) = DONNEES"/>
-        <org.eventb.core.parameter name="." org.eventb.core.comment="donnee de laquelle est créé le RERRP, et est ensuite bloquée" org.eventb.core.identifier="donnee"/>
+        <org.eventb.core.parameter name="." org.eventb.core.comment="donnee bloquée de laquelle est créé le RERRP" org.eventb.core.identifier="donnee"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd12" org.eventb.core.predicate="donnee ∉ MessagesArrives"/>
         <org.eventb.core.guard name="@" org.eventb.core.label="grd13" org.eventb.core.predicate="donnee ∈ dom(StockNoeud) ∧ donnee ∈ dom(NbSauts)"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="TypeMessage ≔ TypeMessage ∪ {m ↦ RERRP}" org.eventb.core.label="act7"/>
@@ -229,4 +231,5 @@
     <org.eventb.core.invariant name="'&gt;" org.eventb.core.label="inv7" org.eventb.core.predicate="∀m1,m2·(m1 ↦ m2 ∈ LienRREQetRREP &#13;&#10;&#9;⇒ TypeMessage(m1) = RREQ ∧ TypeMessage(m2) = RREP)"/>
     <org.eventb.core.variable name="'A" org.eventb.core.comment="la destination des rreq à diffuser" org.eventb.core.identifier="DestDuplicat"/>
     <org.eventb.core.variable name="'C" org.eventb.core.identifier="MessagesBloques"/>
+    <org.eventb.core.invariant name="'G" org.eventb.core.comment="les liens cassés sont dans des RERRP" org.eventb.core.label="inv8" org.eventb.core.predicate="∀m·(m ∈ dom(LienCasse) ⇒ TypeMessage(m) = RERRP)"/>
 </org.eventb.core.machineFile>

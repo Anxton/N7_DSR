@@ -413,7 +413,7 @@
                                                         <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="case distinction (r0∈(Routes ∖ {r})∪{{x,n1·x ↦ n1∈r∧x&lt;i ∣ x ↦ n1}})" org.eventb.core.prHyps="p59">
                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prHyps="p63">
                                                                 <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p59"/>
-                                                                <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p60" org.eventb.core.prHyps="p7,p18,p35,p6,p39,p30,p8,p1,p3,p31,p27,p10,p16,p20,p21,p11,p36,p29,p4,p12,p24,p37,p38,p25,p15,p28,p22,p13,p17,p40,p14,p41,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p59,p61,p62,p63">
+                                                                <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p60" org.eventb.core.prHyps="p1,p3,p4,p6,p7,p8,p53,p10,p54,p55,p11,p59,p51,p12,p13,p14,p15,p52,p16,p17,p18,p61,p20,p45,p21,p22,p24,p25,p63,p62,p49,p27,p48,p50,p28,p47,p29,p30,p31,p35,p46,p36,p37,p38,p39,p40,p41">
                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                 </org.eventb.core.prRule>
                                                             </org.eventb.core.prAnte>
@@ -643,7 +643,7 @@
                                                                                                                                                                                                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p105" org.eventb.core.prHyps="p106">
                                                                                                                                                                                                                                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p105" org.eventb.core.prHyps="">
                                                                                                                                                                                                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p107">
-                                                                                                                                                                                                                                                <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p107" org.eventb.core.prHyps="p7,p18,p35,p6,p39,p30,p8,p1,p3,p31,p27,p10,p16,p20,p21,p11,p36,p29,p4,p12,p24,p37,p38,p25,p15,p28,p22,p13,p17,p14,p41,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p59,p61,p62,p65,p77,p78,p89,p90,p84,p85,p106">
+                                                                                                                                                                                                                                                <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p107" org.eventb.core.prHyps="p1,p89,p7,p53,p10,p78,p11,p59,p12,p13,p52,p18,p21,p77,p24,p25,p62,p49,p27,p50,p28,p29,p90,p30,p31,p65,p46,p38,p106,p84,p3,p4,p6,p8,p54,p55,p51,p85,p14,p15,p16,p17,p61,p20,p45,p22,p48,p47,p35,p36,p37,p39,p41">
                                                                                                                                                                                                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                                                                                                                                                                                                 </org.eventb.core.prRule>
                                                                                                                                                                                                                                             </org.eventb.core.prAnte>
@@ -652,7 +652,7 @@
                                                                                                                                                                                                                                     <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p109" org.eventb.core.prHyps="p108">
                                                                                                                                                                                                                                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p109" org.eventb.core.prHyps="">
                                                                                                                                                                                                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p110">
-                                                                                                                                                                                                                                                <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p110" org.eventb.core.prHyps="p7,p18,p35,p6,p39,p30,p8,p1,p3,p31,p27,p10,p16,p20,p21,p11,p36,p29,p4,p12,p24,p37,p38,p25,p15,p28,p22,p13,p17,p14,p41,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p59,p61,p62,p65,p77,p78,p89,p90,p84,p85,p108">
+                                                                                                                                                                                                                                                <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p110" org.eventb.core.prHyps="p1,p89,p7,p53,p10,p78,p11,p59,p12,p13,p52,p18,p21,p77,p24,p25,p62,p49,p27,p50,p108,p28,p29,p90,p30,p31,p65,p46,p38,p84,p3,p4,p6,p8,p54,p55,p51,p85,p14,p15,p16,p17,p61,p20,p45,p22,p48,p47,p35,p36,p37,p39,p41">
                                                                                                                                                                                                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1;2;3:30000"/>
                                                                                                                                                                                                                                                 </org.eventb.core.prRule>
                                                                                                                                                                                                                                             </org.eventb.core.prAnte>
@@ -1093,7 +1093,7 @@
                                         <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
                                             <org.eventb.core.prAnte name="'">
                                                 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p1,p3,p5,p6,p7,p9,p10,p11,p13,p35,p18,p39,p38,p19,p37,p20,p21,p22,p47,p26,p36,p27,p28,p29,p31"/>
-                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p46" org.eventb.core.prHyps="p17,p12,p15,p14,p23,p30,p40,p41,p42,p1,p3,p5,p6,p7,p9,p10,p11,p13,p35,p18,p39,p38,p19,p37,p20,p21,p22,p26,p36,p27,p28,p29,p31">
+                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p46" org.eventb.core.prHyps="p1,p3,p5,p6,p7,p41,p9,p42,p10,p11,p12,p40,p13,p14,p35,p15,p17,p18,p39,p38,p19,p37,p20,p21,p22,p23,p26,p36,p27,p28,p29,p30,p31">
                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
                                                     <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
                                                 </org.eventb.core.prRule>
@@ -1348,7 +1348,7 @@
                                                                                                 <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
                                                                                                     <org.eventb.core.prAnte name="'">
                                                                                                         <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p1,p4,p6,p7,p8,p10,p51,p12,p13,p14,p15,p16,p45,p25,p49,p48,p28,p47,p29,p30,p31,p67,p35,p46,p36,p38,p40,p41"/>
-                                                                                                        <org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p66" org.eventb.core.prHyps="p37,p24,p21,p17,p39,p50,p52,p53,p54,p55,p58,p59,p1,p4,p6,p7,p8,p10,p51,p12,p13,p14,p15,p16,p45,p25,p49,p48,p28,p47,p29,p30,p31,p35,p46,p36,p38,p40,p41">
+                                                                                                        <org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p66" org.eventb.core.prHyps="p1,p4,p6,p7,p53,p8,p54,p10,p55,p51,p12,p13,p14,p15,p52,p16,p17,p58,p45,p21,p24,p25,p59,p49,p50,p48,p28,p47,p29,p30,p31,p35,p46,p36,p37,p38,p39,p40,p41">
                                                                                                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
                                                                                                             <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
                                                                                                         </org.eventb.core.prRule>
@@ -1356,12 +1356,12 @@
                                                                                                 </org.eventb.core.prRule>
                                                                                             </org.eventb.core.prAnte>
                                                                                             <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p68">
-                                                                                                <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p68" org.eventb.core.prHyps="p7,p18,p35,p6,p40,p30,p8,p1,p3,p31,p27,p10,p16,p20,p22,p11,p36,p29,p4,p12,p25,p37,p38,p24,p15,p28,p21,p13,p17,p39,p14,p41,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p58,p59">
+                                                                                                <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p68" org.eventb.core.prHyps="p1,p3,p4,p6,p7,p8,p53,p10,p54,p55,p11,p51,p12,p13,p14,p15,p52,p16,p17,p18,p58,p20,p45,p22,p21,p25,p24,p59,p49,p27,p48,p50,p28,p47,p29,p30,p31,p35,p46,p36,p37,p38,p40,p39,p41">
                                                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                                                 </org.eventb.core.prRule>
                                                                                             </org.eventb.core.prAnte>
                                                                                             <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p69">
-                                                                                                <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p69" org.eventb.core.prHyps="p7,p18,p35,p6,p40,p30,p8,p1,p3,p31,p27,p10,p16,p20,p22,p11,p36,p29,p4,p12,p25,p37,p38,p24,p15,p28,p21,p13,p17,p39,p14,p41,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p58,p59">
+                                                                                                <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p69" org.eventb.core.prHyps="p1,p3,p4,p6,p7,p8,p53,p10,p54,p55,p11,p51,p12,p13,p14,p15,p52,p16,p17,p18,p58,p20,p45,p22,p21,p25,p24,p59,p49,p27,p48,p50,p28,p47,p29,p30,p31,p35,p46,p36,p37,p38,p40,p39,p41">
                                                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                                                 </org.eventb.core.prRule>
                                                                                             </org.eventb.core.prAnte>
@@ -1383,7 +1383,7 @@
                                                                                         <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
                                                                                             <org.eventb.core.prAnte name="'">
                                                                                                 <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p1,p4,p6,p7,p8,p10,p51,p12,p13,p14,p15,p16,p45,p25,p49,p48,p28,p47,p29,p30,p31,p67,p35,p46,p36,p38,p40,p41"/>
-                                                                                                <org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p74" org.eventb.core.prHyps="p37,p24,p21,p17,p39,p50,p52,p53,p54,p55,p58,p59,p72,p73,p1,p4,p6,p7,p8,p10,p51,p12,p13,p14,p15,p16,p45,p25,p49,p48,p28,p47,p29,p30,p31,p35,p46,p36,p38,p40,p41">
+                                                                                                <org.eventb.core.prRule name="r8" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p74" org.eventb.core.prHyps="p1,p4,p6,p7,p53,p8,p54,p10,p72,p55,p51,p12,p13,p14,p73,p15,p52,p16,p17,p58,p45,p21,p24,p25,p59,p49,p50,p48,p28,p47,p29,p30,p31,p35,p46,p36,p37,p38,p39,p40,p41">
                                                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
                                                                                                     <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
                                                                                                 </org.eventb.core.prRule>
@@ -1398,7 +1398,7 @@
                                                                 </org.eventb.core.prRule>
                                                             </org.eventb.core.prAnte>
                                                             <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p75">
-                                                                <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p75" org.eventb.core.prHyps="p7,p18,p35,p6,p40,p30,p8,p1,p3,p31,p27,p10,p16,p20,p22,p11,p36,p29,p4,p12,p25,p37,p38,p24,p15,p28,p21,p13,p17,p39,p14,p41,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p58,p59">
+                                                                <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p75" org.eventb.core.prHyps="p1,p3,p4,p6,p7,p8,p53,p10,p54,p55,p11,p51,p12,p13,p14,p15,p52,p16,p17,p18,p58,p20,p45,p22,p21,p25,p24,p59,p49,p27,p48,p50,p28,p47,p29,p30,p31,p35,p46,p36,p37,p38,p40,p39,p41">
                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                 </org.eventb.core.prRule>
                                                             </org.eventb.core.prAnte>
@@ -2562,7 +2562,7 @@
                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p49" org.eventb.core.prHyps="p48">
                                                         <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p49" org.eventb.core.prHyps="">
                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p50">
-                                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p50" org.eventb.core.prHyps="p9,p18,p27,p8,p32,p25,p10,p1,p4,p26,p23,p12,p17,p19,p14,p29,p24,p5,p15,p22,p30,p31,p28,p3,p20,p16,p34,p35,p36,p37,p38,p39,p40,p41,p45,p48">
+                                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p50" org.eventb.core.prHyps="p1,p3,p4,p5,p8,p9,p40,p10,p48,p12,p45,p14,p38,p15,p16,p17,p18,p19,p34,p20,p22,p39,p23,p37,p36,p41,p24,p25,p26,p27,p28,p35,p29,p30,p31,p32">
                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                 </org.eventb.core.prRule>
                                                             </org.eventb.core.prAnte>
@@ -2573,7 +2573,7 @@
                                                                     </org.eventb.core.prAnte>
                                                                     <org.eventb.core.prAnte name="(" org.eventb.core.prHyps="p41">
                                                                         <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p41"/>
-                                                                        <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p51" org.eventb.core.prHyps="p22,p28,p3,p20,p40,p45,p48">
+                                                                        <org.eventb.core.prRule name="r9" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p51" org.eventb.core.prHyps="p45,p3,p20,p22,p28,p40,p48">
                                                                             <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
                                                                         </org.eventb.core.prRule>
                                                                     </org.eventb.core.prAnte>
@@ -2628,7 +2628,7 @@
         <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀m⦂MESSAGES·m∈MessagesArrives⇒Destination(m)=StockNoeud(m)"/>
         <org.eventb.core.prPred name="p25" org.eventb.core.predicate="Destination∈Messages → Noeuds"/>
         <org.eventb.core.prPred name="p26" org.eventb.core.predicate="DestDuplicat∈Messages ⇸ (Messages ⇸ Noeuds)"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="dom(StockNoeud)∩dom(MessagesLiens)=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="dom(StockNoeud)∩dom(MessagesLiens)=(∅ ⦂ ℙ(MESSAGES))"/>
         <org.eventb.core.prPred name="p43" org.eventb.core.predicate="Messages⊆MESSAGES"/>
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="Noeuds⊆NOEUDS"/>
         <org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀n⦂NOEUDS,routes⦂ℙ(ℙ(ℤ×NOEUDS))·n ↦ routes∈TableRoutageLocale⇒(∀r⦂ℙ(ℤ×NOEUDS)·r∈routes⇒r=(∅ ⦂ ℙ(ℤ×NOEUDS))∨r(0)=n)"/>
@@ -2666,10 +2666,10 @@
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="dom(StockNoeud)∪dom(MessagesLiens)∪MessagesPerdus=Messages"/>
         <org.eventb.core.prPred name="p52" org.eventb.core.predicate="⊤"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀m⦂MESSAGES·m∈dom(DestDuplicat)⇒DestDuplicat(m)∈Messages ⤔ Noeuds"/>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="dom(StockNoeud)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="dom(StockNoeud)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
         <org.eventb.core.prPred name="p20" org.eventb.core.predicate="0 ‥ card(dom(r)) − 1=dom(r)"/>
         <org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀m⦂MESSAGES·m∈Messages⇒¬Source(m)=Destination(m)"/>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="dom(MessagesLiens)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
+        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="dom(MessagesLiens)∩MessagesPerdus=(∅ ⦂ ℙ(MESSAGES))"/>
         <org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀n⦂NOEUDS·n∈ran(r)⇒finite(dom(r ▷ {n}))∧(∃x⦂ℤ·dom(r ▷ {n})={x})"/>
         <org.eventb.core.prPred name="p27" org.eventb.core.predicate="SAUTSMAX=10"/>
         <org.eventb.core.prPred name="p28" org.eventb.core.predicate="r∈0 ‥ SAUTSMAX ⇸ Noeuds"/>
@@ -2978,8 +2978,8 @@
                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p41">
                                                         <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
                                                             <org.eventb.core.prAnte name="'">
-                                                                <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p8,p7,p26,p21,p9,p2,p22,p13,p14,p23,p20,p5,p12,p18,p24,p19,p28,p29,p30,p31,p32,p33"/>
-                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p25,p4,p17,p16,p1,p34,p38,p41,p8,p7,p26,p21,p9,p2,p22,p13,p14,p23,p20,p5,p12,p18,p24,p19,p28,p29,p30,p31,p32,p33">
+                                                                <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p13,p2,p14,p5,p28,p7,p18,p8,p33,p31,p9,p19,p30,p20,p21,p22,p29,p32,p23,p12,p24,p26"/>
+                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p1,p38,p2,p4,p5,p7,p8,p9,p32,p12,p13,p14,p28,p16,p17,p18,p33,p31,p19,p30,p20,p21,p22,p41,p29,p23,p34,p24,p25,p26">
                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
                                                                     <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
                                                                 </org.eventb.core.prRule>
