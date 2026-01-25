@@ -34,8 +34,8 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="[" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DiffuserMesage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="DiffuserMessage"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd8" org.eventb.core.predicate="dom(DestDuplicat(mO)) ⊈ MessagesArrives"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd9" org.eventb.core.predicate="MessagesArrives ⊆ dom(StockNoeud) ∖ dom(DestDuplicat(mO))"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd9" org.eventb.core.predicate="dom(DestDuplicat(mO)) ⊈ MessagesArrives"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="MessagesArrives ⊆ dom(StockNoeud) ∖ dom(DestDuplicat(mO))"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionMessage"/>

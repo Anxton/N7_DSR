@@ -58,12 +58,9 @@
         <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="r ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="Routes ≔ Routes ∪ {r}" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="0 ↦ ns ∈ r"/>
-        <org.eventb.core.guard name="," org.eventb.core.comment="contigu : " org.eventb.core.label="grd5" org.eventb.core.predicate="0‥(card(dom(r)) − 1) = dom(r) "/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd5" org.eventb.core.predicate="0‥(card(dom(r)) − 1) = dom(r) "/>
         <org.eventb.core.parameter name="-" org.eventb.core.comment="noeud source de la route" org.eventb.core.identifier="ns"/>
-        <org.eventb.core.parameter name="." org.eventb.core.comment="noeud destination de la route" org.eventb.core.identifier="nd"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="(card(dom(r)) − 1) ↦ ns ∈ r "/>
-        <org.eventb.core.guard name="3" org.eventb.core.label="grd7" org.eventb.core.predicate="ns ≠ nd"/>
-        <org.eventb.core.guard name="7" org.eventb.core.label="grd8" org.eventb.core.predicate="∀n·(n ∈ ran(r) ⇒ finite(dom(r ▷ {n})) ∧ card(dom(r ▷ {n})) = 1)"/>
+        <org.eventb.core.guard name="7" org.eventb.core.label="grd6" org.eventb.core.predicate="∀n·(n ∈ ran(r) ⇒ finite(dom(r ▷ {n})) ∧ card(dom(r ▷ {n})) = 1)"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="U" org.eventb.core.identifier="MessagesArrives"/>
     <org.eventb.core.variable name="a" org.eventb.core.identifier="TableRoutageLocale"/>
@@ -93,18 +90,23 @@
     <org.eventb.core.variable name="i" org.eventb.core.identifier="Routes"/>
     <org.eventb.core.variable name="n" org.eventb.core.identifier="DestDuplicat"/>
     <org.eventb.core.event name="q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="TronquerRouteTable">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+        <org.eventb.core.parameter name="'" org.eventb.core.comment="route pré-troncage" org.eventb.core.identifier="r"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="n ∈ dom(TableRoutageLocale)"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.comment="noeud à partir duquel on supprime la route" org.eventb.core.identifier="nt"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.comment="noeud à partir duquel on tronque" org.eventb.core.identifier="nt"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="nt ∈ Noeuds ∖ {n}"/>
         <org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="r ∈ TableRoutageLocale(n) ∧ r ≠ ∅"/>
-        <org.eventb.core.parameter name="+" org.eventb.core.comment="noeud correspondant à la route" org.eventb.core.identifier="n"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.comment="noeud duquel on tronque" org.eventb.core.identifier="n"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="finite(dom(r)) ∧ dom(r) ⊆ 0‥SAUTSMAX"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd5" org.eventb.core.predicate="0‥(card(dom(r)) − 1) = dom(r)"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="Routes ≔ (Routes ∖ {r}) ∪ {{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i}}" org.eventb.core.label="act1"/>
-        <org.eventb.core.parameter name="." org.eventb.core.identifier="i"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="i ∈  dom(r ▷ {nt}) ∧ i ∈ ℕ"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i} ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
+        <org.eventb.core.parameter name="." org.eventb.core.comment="indice à partir duquel on tronque" org.eventb.core.identifier="i"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="i ≤ SAUTSMAX "/>
+        <org.eventb.core.guard name="9" org.eventb.core.label="grd7" org.eventb.core.predicate="i ∈ dom(r ▷ {nt}) ∧ i ≥ 2"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd8" org.eventb.core.predicate="{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i} ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="TableRoutageLocale(n) ≔ (TableRoutageLocale(n) ∖ {r}) ∪ &#13;&#10;&#9;{{x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i}}" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd9" org.eventb.core.predicate="r ≠ ∅"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd10" org.eventb.core.predicate="nt = r(i)"/>
+        <org.eventb.core.guard name="8" org.eventb.core.label="grd11" org.eventb.core.predicate="0‥i−1 = dom({x ↦ n1 ∣ x ↦ n1 ∈ r ∧ x &lt; i})"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="r" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,routes·(n ↦ routes ∈ TableRoutageLocale ⇒ (∀r·(r ∈ routes ⇒ r(0) = n)))"/>
+    <org.eventb.core.invariant name="r" org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,routes·(n ↦ routes ∈ TableRoutageLocale ⇒ (∀r·(r ∈ routes ⇒ r = ∅ ∨ r(0) = n)))"/>
 </org.eventb.core.machineFile>
