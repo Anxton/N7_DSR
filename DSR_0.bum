@@ -121,7 +121,7 @@
         <org.eventb.core.guard name="3" org.eventb.core.label="grd5" org.eventb.core.predicate="src = StockNoeud(mO)"/>
         <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="finite(Liens)"/>
         <org.eventb.core.action name="6" org.eventb.core.assignment="DestDiffusion(mO) ≔ DestDiffusion(mO) ∪ {mD ↦ destD}" org.eventb.core.label="act6"/>
-        <org.eventb.core.parameter name="7" org.eventb.core.comment="destinataire du duplicat" org.eventb.core.identifier="destD"/>
+        <org.eventb.core.parameter name="7" org.eventb.core.comment="destinataire de la duplication" org.eventb.core.identifier="destD"/>
         <org.eventb.core.guard name="8" org.eventb.core.label="grd8" org.eventb.core.predicate="mO ∈ dom(DestDiffusion) ∧ mO ∈ dom(DestDiffusion(mO))"/>
         <org.eventb.core.guard name="?" org.eventb.core.label="grd9" org.eventb.core.predicate="destD ∈ ran({src} ◁ Liens)"/>
         <org.eventb.core.guard name="@" org.eventb.core.comment="un message dupliqué ne peut pas être lui même dupliqué" org.eventb.core.label="grd10" org.eventb.core.predicate="destD ∉ ran(DestDiffusion(mO)) ∧ mD ∉ dom(DestDiffusion(mO))"/>
