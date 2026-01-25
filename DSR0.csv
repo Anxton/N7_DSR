@@ -1,0 +1,30 @@
+Element Name,Total,Auto,Man.
+Proof Obligations,114,98,16
+INITIALISATION,14,14,0
+inv1,0,0,0
+AjoutNoeud,6,6,0
+inv2,0,0,0
+inv3,4,4,0
+AjoutLien,3,2,1
+SuppressionLien,6,6,0
+AjoutMessage,13,11,2
+inv4,5,5,0
+inv5,5,5,0
+SuppressionMessage,13,13,0
+Envoyer,9,8,1
+PreDuplicationMessage,4,3,1
+DupliquerMessage,19,15,4
+DiffuserMessage,15,9,6
+Recevoir,5,4,1
+Perdre,4,4,0
+inv6,8,7,1
+inv7,10,9,1
+inv8,7,6,1
+inv9,7,6,1
+inv10,6,5,1
+inv11,7,4,3
+inv12,9,8,1
+inv13,9,7,2
+inv14,5,3,2
+inv15,8,6,2
+inv16,3,2,1

@@ -1,0 +1,23 @@
+Element Name,Total,Auto,Man.
+Proof Obligations,26,19,7
+INITIALISATION,4,4,0
+AjoutNoeud,3,3,0
+AjoutLien,0,0,0
+SuppressionLien,0,0,0
+AjoutMessage,0,0,0
+PreDuplicationMessage,0,0,0
+DupliquerMessage,0,0,0
+DiffuserMessage,0,0,0
+SuppressionMessage,0,0,0
+Envoyer,0,0,0
+Recevoir,0,0,0
+Perdre,0,0,0
+Arriver,0,0,0
+CreerRoute,4,3,1
+inv1,4,4,0
+AjouterRouteTable,4,3,1
+inv2,3,1,2
+inv3,6,5,1
+SupprimerRouteTable,2,2,0
+TronquerRouteTable,8,4,4
+inv4,6,3,3
