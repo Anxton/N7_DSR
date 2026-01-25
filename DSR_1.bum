@@ -34,8 +34,8 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="[" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="DiffuserMesage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="DiffuserMessage"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd9" org.eventb.core.predicate="dom(DestDuplicat(mO)) ⊈ MessagesArrives"/>
-        <org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="MessagesArrives ⊆ dom(StockNoeud) ∖ dom(DestDuplicat(mO))"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd9" org.eventb.core.predicate="dom(DestDiffusion(mO)) ⊈ MessagesArrives"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd10" org.eventb.core.predicate="MessagesArrives ⊆ dom(StockNoeud) ∖ dom(DestDiffusion(mO))"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionMessage"/>
@@ -56,7 +56,7 @@
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="prj2(MessagesLiens(m)) = Destination(m)"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="MessagesArrives ≔ MessagesArrives ∪ {m}" org.eventb.core.label="act5"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd7" org.eventb.core.predicate="m ∉ dom(DestDuplicat)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd7" org.eventb.core.predicate="m ∉ dom(DestDiffusion)"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="U" org.eventb.core.identifier="MessagesArrives"/>
     <org.eventb.core.invariant name="V" org.eventb.core.label="inv1" org.eventb.core.predicate="MessagesArrives ⊆ Messages"/>
@@ -65,6 +65,6 @@
     <org.eventb.core.invariant name="`" org.eventb.core.label="inv4" org.eventb.core.predicate="∀m·(m ∈ dom(MessagesLiens) ⇒ m ∉ MessagesArrives)"/>
     <org.eventb.core.variable name="W" org.eventb.core.identifier="NbSauts"/>
     <org.eventb.core.refinesMachine name="Y" org.eventb.core.target="DSR_0"/>
-    <org.eventb.core.variable name="Z" org.eventb.core.identifier="DestDuplicat"/>
-    <org.eventb.core.invariant name="]" org.eventb.core.label="inv5" org.eventb.core.predicate="dom(DestDuplicat) ∩ MessagesArrives = ∅"/>
+    <org.eventb.core.variable name="Z" org.eventb.core.identifier="DestDiffusion"/>
+    <org.eventb.core.invariant name="]" org.eventb.core.label="inv5" org.eventb.core.predicate="dom(DestDiffusion) ∩ MessagesArrives = ∅"/>
 </org.eventb.core.machineFile>
