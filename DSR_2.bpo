@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="90">
+<org.eventb.core.poFile org.eventb.core.poStamp="92">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="44">
         <org.eventb.core.poIdentifier name="MESSAGES" org.eventb.core.type="ℙ(MESSAGES)"/>
         <org.eventb.core.poIdentifier name="NOEUDS" org.eventb.core.type="ℙ(NOEUDS)"/>
@@ -366,7 +366,13 @@
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#-"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalt("/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="AjouterRouteTable/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
+    <org.eventb.core.poSequent name="AjouterRouteTable/grd7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="92">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalt,"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈dom(r)∧r∈ℤ ⇸ NOEUDS∧1∈dom(r)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#8"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#8"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalt,"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="AjouterRouteTable/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="92">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalt"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="TableRoutageLocale{n ↦ TableRoutageLocale(n)∪{r}}∈Noeuds → ℙ(Routes)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.invariant#f"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d"/>
@@ -374,7 +380,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poSequent#AjouterRouteTable\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#HYPDSR_ctx_I|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="AjouterRouteTable/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
+    <org.eventb.core.poSequent name="AjouterRouteTable/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="92">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalt"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n0⦂NOEUDS,routes⦂ℙ(ℙ(ℤ×NOEUDS))·n0 ↦ routes∈TableRoutageLocale{n ↦ TableRoutageLocale(n)∪{r}}⇒(∀r⦂ℙ(ℤ×NOEUDS)·r∈routes⇒r=(∅ ⦂ ℙ(ℤ×NOEUDS))∨r(0)=n0)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.invariant#r"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d"/>
@@ -382,7 +388,7 @@
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poSequent#AjouterRouteTable\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="AjouterRouteTable/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="90">
+    <org.eventb.core.poSequent name="AjouterRouteTable/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="92">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalt"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="n∈dom(TableRoutageLocale)∧TableRoutageLocale∈NOEUDS ⇸ ℙ(ℙ(ℤ × NOEUDS))" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.action#4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.action#4"/>
@@ -397,10 +403,14 @@
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="r∈Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#)"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n∈dom(TableRoutageLocale)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#6"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalt" org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalt(" org.eventb.core.poStamp="90">
+    <org.eventb.core.poPredicateSet name="EVTHYPTableRoutageLocalt," org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalt(" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="r∉TableRoutageLocale(n)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#-"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="0 ↦ n∈r" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#1"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="{n ↦ r}∈Noeuds ⇸ Routes" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#3"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="0∈dom(r)∧1∈dom(r)" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#7"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPTableRoutageLocalt" org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTHYPTableRoutageLocalt," org.eventb.core.poStamp="92">
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="r(0) ↦ r(1)∈Liens" org.eventb.core.source="/N7_DSR/DSR_2.bum|org.eventb.core.machineFile#DSR_2|org.eventb.core.event#d|org.eventb.core.guard#8"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poSequent name="SupprimerRouteTable/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="90">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/N7_DSR/DSR_2.bpo|org.eventb.core.poFile#DSR_2|org.eventb.core.poPredicateSet#EVTALLHYPTableRoutageLocalu"/>

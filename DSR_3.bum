@@ -36,6 +36,8 @@
         <org.eventb.core.guard name="." org.eventb.core.label="grd12" org.eventb.core.predicate="noeudSource ∈ dom(TableRoutageLocale) ∧ r ∈ TableRoutageLocale(noeudSource)"/>
         <org.eventb.core.parameter name="," org.eventb.core.identifier="r"/>
         <org.eventb.core.guard name="-" org.eventb.core.comment="noeudSource connait une route vers noeudDest dans TableRoutage(noeudSource)" org.eventb.core.label="grd13" org.eventb.core.predicate="finite(dom(r)) ∧ (card(dom(r))−1) ↦ noeudDestination ∈ r"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd14" org.eventb.core.predicate="r = ∅ ∨ 0‥(card(dom(r)) − 1) = dom(r)"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd15" org.eventb.core.predicate="r ≠ ∅"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="^" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SuppressionMessage">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SuppressionMessage"/>
@@ -87,11 +89,11 @@
         <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="r ∈ TableRoutageLocale(n)"/>
         <org.eventb.core.guard name=":" org.eventb.core.comment="la route utilisée pour salvage a pour destination la destination de la donnée" org.eventb.core.label="grd6" org.eventb.core.predicate="finite(dom(r)) ∧ card(dom(r))−1 ∈ dom(r) ∧ r(card(dom(r))−1) = Destination(m)"/>
         <org.eventb.core.action name="1" org.eventb.core.assignment="MessagesBloques ≔ MessagesBloques ∖ {m}" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="LienCasse ≔ {m} ⩤ LienCasse" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="6" org.eventb.core.assignment="Header(m) ≔ (0‥NbSauts(m) ◁ Header(m)) ∪ { (x+d) ↦ n1 ∣ x↦n1 ∈ {0} ⩤ r ∧ d = NbSauts(m) }" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="6" org.eventb.core.assignment="Header(m) ≔ (0‥NbSauts(m) ◁ Header(m)) ∪ { (x+d) ↦ n1 ∣ x↦n1 ∈ {0} ⩤ r ∧ d = NbSauts(m) }" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="7" org.eventb.core.label="grd7" org.eventb.core.predicate="0 ↦ n ∈ r"/>
         <org.eventb.core.guard name="8" org.eventb.core.comment="=&gt; Ne débloque que si le nouveau Header &lt;= SAUTSMAX" org.eventb.core.label="grd8" org.eventb.core.predicate="(0‥NbSauts(m) ◁ Header(m)) ∪ { (x+d) ↦ n1 ∣ x↦n1 ∈ {0} ⩤ r ∧ d = NbSauts(m) } ∈ (0‥SAUTSMAX ⇸ Noeuds)"/>
         <org.eventb.core.guard name="9" org.eventb.core.label="grd9" org.eventb.core.predicate="m ∈ MessagesBloques"/>
+        <org.eventb.core.guard name=";" org.eventb.core.comment="inv10" org.eventb.core.label="grd10" org.eventb.core.predicate="&#9;&#9;∀ h · &#13;&#10;&#9;&#9;&#9;    h∈ran(Header{m ↦ (0 ‥ NbSauts(m) ◁ Header(m))∪{x,d,n1·x ↦ n1∈{0} ⩤ r∧d=NbSauts(m) ∣ x+d ↦ n1}})&#13;&#10;&#9;&#9;&#9;  ⇒&#13;&#10;&#9;&#9;&#9;    h=∅ ∨&#13;&#10;&#9;&#9;&#9;(    finite(dom(h)) ∧&#13;&#10;&#9;&#9;&#9;    0 ‥ card(dom(h)) − 1=dom(h))"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="'1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Perdre">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Perdre"/>
@@ -100,6 +102,7 @@
         <org.eventb.core.action name="+" org.eventb.core.assignment="TypeMessage ≔ TypeMessage ∪ {m ↦ RREQ}" org.eventb.core.label="act7"/>
         <org.eventb.core.refinesEvent name="," org.eventb.core.target="AjoutMessage"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="Header ≔ Header ∪ {m ↦ {0 ↦ noeudSource}}" org.eventb.core.label="act8"/>
+        <org.eventb.core.guard name="." org.eventb.core.comment="inv10" org.eventb.core.label="grd9" org.eventb.core.predicate="∀h·(h ∈ ran(Header ∪ {m ↦ {0 ↦ noeudSource}}) ⇒ h = ∅ ∨ (finite(dom(h)) ∧ (0‥(card(dom(h)) − 1) = dom(h))))"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="'E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="PreDuplicationRREQ">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="PreDuplicationMessage"/>
@@ -124,15 +127,20 @@
         <org.eventb.core.action name="+" org.eventb.core.assignment="Header(m) ≔ Header(m) ∪ {card(dom(Header(m))) ↦ Destination(m)}" org.eventb.core.label="act6"/>
         <org.eventb.core.guard name="3" org.eventb.core.label="grd9" org.eventb.core.predicate="finite(dom(Header(m)))"/>
         <org.eventb.core.guard name="4" org.eventb.core.label="grd10" org.eventb.core.predicate="Header(m) ∪ {card(dom(Header(m))) ↦ Destination(m)} ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd11" org.eventb.core.predicate="∀h·(h ∈ ran(Header) ⇒ h = ∅ ∨ (finite(dom(h)) ∧ (0‥(card(dom(h)) − 1) = dom(h))))"/>
+        <org.eventb.core.guard name="6" org.eventb.core.comment="inv10" org.eventb.core.label="grd12" org.eventb.core.predicate="∀ h · &#13;&#10;&#9;&#9;&#9;    h∈ran(Header{m ↦ Header(m)∪{card(dom(Header(m))) ↦ Destination(m)}})&#13;&#10;&#9;&#9;&#9;  ⇒&#13;&#10;&#9;&#9;&#9;    h=∅ ∨&#13;&#10;&#9;&#9;&#9;(    finite(dom(h)) ∧&#13;&#10;&#9;&#9;&#9;    0 ‥ card(dom(h)) − 1=dom(h))"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="p" org.eventb.core.label="inv1" org.eventb.core.predicate="Header ∈ Messages → (0‥SAUTSMAX ⇸ Noeuds)"/>
+    <org.eventb.core.invariant name="p" org.eventb.core.comment="{&#13;&#10;&#9;m1 ↦ {0↦A, 1↦B},&#13;&#10;&#9;m2 ↦ {0↦A}&#13;&#10;}" org.eventb.core.label="inv1" org.eventb.core.predicate="Header ∈ Messages → (0‥SAUTSMAX ⇸ Noeuds)"/>
     <org.eventb.core.variable name="q" org.eventb.core.identifier="Header"/>
-    <org.eventb.core.invariant name="r" org.eventb.core.label="inv2" org.eventb.core.predicate="TypeMessage ∈ Messages → MESSAGETYPE"/>
+    <org.eventb.core.invariant name="r" org.eventb.core.comment="{&#13;&#10;&#9;m1 ↦ RREQ,&#13;&#10;&#9;m2 ↦ RREQ&#13;&#10;}" org.eventb.core.label="inv2" org.eventb.core.predicate="TypeMessage ∈ Messages → MESSAGETYPE"/>
     <org.eventb.core.event name="s" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="RecevoirRREQ">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="Recevoir"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd8" org.eventb.core.predicate="TypeMessage(m) = RREQ"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="Header(m) ≔ Header(m) ∪ {card(dom(Header(m))) ↦ prj2(MessagesLiens(m))} " org.eventb.core.comment="le noeud s'ajoute a la &quot;route&quot; a la reception du RREQ" org.eventb.core.label="act5"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd9" org.eventb.core.predicate="Header(m) ∪ {card(dom(Header(m))) ↦ prj2(MessagesLiens(m))} ∈ 0‥SAUTSMAX ⇸ Noeuds "/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd9" org.eventb.core.predicate="finite(Header(m))"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd10" org.eventb.core.predicate="finite(dom(Header(m)))"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd11" org.eventb.core.predicate="Header(m) ∪ {card(dom(Header(m))) ↦ prj2(MessagesLiens(m))} ∈ 0‥SAUTSMAX ⇸ Noeuds"/>
+        <org.eventb.core.guard name="0" org.eventb.core.comment="inv10" org.eventb.core.label="grd12" org.eventb.core.predicate="∀ h · &#13;&#10;&#9;&#9;&#9;    h∈ran(Header{m ↦ Header(m)∪{card(dom(Header(m))) ↦ prj2(MessagesLiens(m))}})&#13;&#10;&#9;&#9;&#9;  ⇒&#13;&#10;&#9;&#9;&#9;    h=∅ ∨&#13;&#10;&#9;&#9;&#9;(    finite(dom(h)) ∧&#13;&#10;&#9;&#9;&#9;    0 ‥ card(dom(h)) − 1=dom(h))"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="u" org.eventb.core.identifier="TypeMessage"/>
     <org.eventb.core.event name="v" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="EnvoyerRREQ">
@@ -220,7 +228,7 @@
     </org.eventb.core.event>
     <org.eventb.core.invariant name="'." org.eventb.core.label="inv3" org.eventb.core.predicate="MessagesBloques ⊆ Messages"/>
     <org.eventb.core.variable name="'/" org.eventb.core.identifier="LienCasse"/>
-    <org.eventb.core.invariant name="'0" org.eventb.core.comment="on garde le lien cassé" org.eventb.core.label="inv4" org.eventb.core.predicate="LienCasse ∈ Messages ⇸ (Noeuds ⇸ Noeuds)"/>
+    <org.eventb.core.invariant name="'0" org.eventb.core.comment="{&#13;&#10;&#9;m ↦ {A ↦ B}&#13;&#10;}" org.eventb.core.label="inv4" org.eventb.core.predicate="LienCasse ∈ Messages ⇸ (Noeuds ⇸ Noeuds)"/>
     <org.eventb.core.refinesMachine name="'4" org.eventb.core.target="DSR_2"/>
     <org.eventb.core.variable name="'5" org.eventb.core.identifier="Routes"/>
     <org.eventb.core.variable name="'6" org.eventb.core.identifier="RoutesTrouvee"/>
@@ -232,4 +240,6 @@
     <org.eventb.core.variable name="'A" org.eventb.core.comment="la destination des rreq à diffuser" org.eventb.core.identifier="DestDuplicat"/>
     <org.eventb.core.variable name="'C" org.eventb.core.identifier="MessagesBloques"/>
     <org.eventb.core.invariant name="'G" org.eventb.core.comment="les liens cassés sont dans des RERRP" org.eventb.core.label="inv8" org.eventb.core.predicate="∀m·(m ∈ dom(LienCasse) ⇒ TypeMessage(m) = RERRP)"/>
+    <org.eventb.core.invariant name="'I" org.eventb.core.comment="on a qu'un lien cassé par RERRP" org.eventb.core.label="inv9" org.eventb.core.predicate="∀m,lc·(m ↦ lc ∈ LienCasse ⇒ finite(lc) ∧ card(lc) = 1)"/>
+    <org.eventb.core.invariant name="'H" org.eventb.core.comment="pas de trou dans les header" org.eventb.core.label="inv10" org.eventb.core.predicate="∀h·(h ∈ ran(Header) ⇒ h = ∅ ∨ (finite(dom(h)) ∧ (0‥(card(dom(h)) − 1) = dom(h))))"/>
 </org.eventb.core.machineFile>
